@@ -1,0 +1,769 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>WebGL - Orthographic 3D · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="WebGL-3D-Perspective.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../fundamentals/">
+            
+                <a href="../fundamentals/">
+            
+                    
+                    Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../fundamentals/WebGL-Fundamentals.html">
+            
+                <a href="../fundamentals/WebGL-Fundamentals.html">
+            
+                    
+                    WebGL Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../fundamentals/WebGL-How-It-Works.html">
+            
+                <a href="../fundamentals/WebGL-How-It-Works.html">
+            
+                    
+                    WebGL How It Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../fundamentals/WebGL-Shaders-and-GLSL.html">
+            
+                <a href="../fundamentals/WebGL-Shaders-and-GLSL.html">
+            
+                    
+                    WebGL Shaders and GLSL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../image-processing/">
+            
+                <a href="../image-processing/">
+            
+                    
+                    Image Processing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../image-processing/WebGL-Image-Processing.html">
+            
+                <a href="../image-processing/WebGL-Image-Processing.html">
+            
+                    
+                    WebGL Image Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../image-processing/WebGL-Image-Processing-Continued.html">
+            
+                <a href="../image-processing/WebGL-Image-Processing-Continued.html">
+            
+                    
+                    WebGL Image Processing Continued
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../2D-translation/">
+            
+                <a href="../2D-translation/">
+            
+                    
+                    2D translation, rotation, scale, matrix math
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../2D-translation/WebGL-2D-Translation.html">
+            
+                <a href="../2D-translation/WebGL-2D-Translation.html">
+            
+                    
+                    WebGL 2D Translation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../2D-translation/WebGL-2D-Rotation.html">
+            
+                <a href="../2D-translation/WebGL-2D-Rotation.html">
+            
+                    
+                    WebGL 2D Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../2D-translation/WebGL-2D-Scale.html">
+            
+                <a href="../2D-translation/WebGL-2D-Scale.html">
+            
+                    
+                    WebGL 2D Scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../2D-translation/WebGL-2D-Matrices.html">
+            
+                <a href="../2D-translation/WebGL-2D-Matrices.html">
+            
+                    
+                    WebGL 2D Matrices
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3D
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="WebGL-Orthographic-3D.html">
+            
+                <a href="WebGL-Orthographic-3D.html">
+            
+                    
+                    WebGL - Orthographic 3D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="WebGL-3D-Perspective.html">
+            
+                <a href="WebGL-3D-Perspective.html">
+            
+                    
+                    WebGL 3D Perspective
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="WebGL-3D-Cameras.html">
+            
+                <a href="WebGL-3D-Cameras.html">
+            
+                    
+                    WebGL 3D - Cameras
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../lighting/">
+            
+                <a href="../lighting/">
+            
+                    
+                    Lighting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../lighting/WebGL-3D-Directional-Lighting.html">
+            
+                <a href="../lighting/WebGL-3D-Directional-Lighting.html">
+            
+                    
+                    WebGL 3D - Directional Lighting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../lighting/WebGL-3D-Point-Lighting.html">
+            
+                <a href="../lighting/WebGL-3D-Point-Lighting.html">
+            
+                    
+                    WebGL 3D - Point Lighting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../techniques/">
+            
+                <a href="../techniques/">
+            
+                    
+                    Techniques
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../techniques/WebGL-2D-DrawImage.html">
+            
+                <a href="../techniques/WebGL-2D-DrawImage.html">
+            
+                    
+                    WebGL 2D - DrawImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../techniques/WebGL-2D-Matrix-Stack.html">
+            
+                <a href="../techniques/WebGL-2D-Matrix-Stack.html">
+            
+                    
+                    WebGL 2D - Matrix Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../techniques/WebGL-Text-HTML.html">
+            
+                <a href="../techniques/WebGL-Text-HTML.html">
+            
+                    
+                    WebGL Text - HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../techniques/WebGL-Text-Canvas-2D.html">
+            
+                <a href="../techniques/WebGL-Text-Canvas-2D.html">
+            
+                    
+                    WebGL Text - Canvas 2D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../techniques/WebGL-Text-Using-a-Texture.html">
+            
+                <a href="../techniques/WebGL-Text-Using-a-Texture.html">
+            
+                    
+                    WebGL Text - Using a Texture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../techniques/WebGL-Text-Using-a-Glyph-Texture.html">
+            
+                <a href="../techniques/WebGL-Text-Using-a-Glyph-Texture.html">
+            
+                    
+                    WebGL Text - Using a Glyph Texture
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../misc/">
+            
+                <a href="../misc/">
+            
+                    
+                    Misc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../misc/WebGL-Boilerplate.html">
+            
+                <a href="../misc/WebGL-Boilerplate.html">
+            
+                    
+                    WebGL Boilerplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../misc/WebGL-Resizing-the-Canvas.html">
+            
+                <a href="../misc/WebGL-Resizing-the-Canvas.html">
+            
+                    
+                    WebGL Resizing the Canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../misc/WebGL-Animation.html">
+            
+                <a href="../misc/WebGL-Animation.html">
+            
+                    
+                    WebGL - Animation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../misc/WebGL-3D-Textures.html">
+            
+                <a href="../misc/WebGL-3D-Textures.html">
+            
+                    
+                    WebGL 3D - Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../misc/WebGL-Using-2-or-More-Textures.html">
+            
+                <a href="../misc/WebGL-Using-2-or-More-Textures.html">
+            
+                    
+                    WebGL Using 2 or More Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../misc/WebGL-and-Alpha.html">
+            
+                <a href="../misc/WebGL-and-Alpha.html">
+            
+                    
+                    WebGL and Alpha
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../misc/WebGL-2D-vs-3D-libraries.html">
+            
+                <a href="../misc/WebGL-2D-vs-3D-libraries.html">
+            
+                    
+                    WebGL - 2D vs 3D libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../misc/WebGL-Anti-Patterns.html">
+            
+                <a href="../misc/WebGL-Anti-Patterns.html">
+            
+                    
+                    WebGL - Anti-Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Helper-API-Docs/">
+            
+                <a href="../Helper-API-Docs/">
+            
+                    
+                    Helper API Docs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../TWGL-A-tiny-WebGL-helper-library/">
+            
+                <a href="../TWGL-A-tiny-WebGL-helper-library/">
+            
+                    
+                    TWGL, A tiny WebGL helper library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <a target="_blank" href="https://github.com/greggman/webgl-fundamentals">
+            
+                    
+                    github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >WebGL - Orthographic 3D</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="webgl---orthographic-3d">WebGL - Orthographic 3D</h1>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 3D">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="WebGL-3D-Perspective.html" class="navigation navigation-next " aria-label="Next page: WebGL 3D Perspective">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"WebGL - Orthographic 3D","level":"1.5.1","depth":2,"next":{"title":"WebGL 3D Perspective","level":"1.5.2","depth":2,"path":"3D/WebGL-3D-Perspective.md","ref":"3D/WebGL-3D-Perspective.md","articles":[]},"previous":{"title":"3D","level":"1.5","depth":1,"path":"3D/README.md","ref":"3D/README.md","articles":[{"title":"WebGL - Orthographic 3D","level":"1.5.1","depth":2,"path":"3D/WebGL-Orthographic-3D.md","ref":"3D/WebGL-Orthographic-3D.md","articles":[]},{"title":"WebGL 3D Perspective","level":"1.5.2","depth":2,"path":"3D/WebGL-3D-Perspective.md","ref":"3D/WebGL-3D-Perspective.md","articles":[]},{"title":"WebGL 3D - Cameras","level":"1.5.3","depth":2,"path":"3D/WebGL-3D-Cameras.md","ref":"3D/WebGL-3D-Cameras.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3D/WebGL-Orthographic-3D.md","mtime":"2016-09-18T10:56:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-18T10:56:36.536Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
