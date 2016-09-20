@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [简介](README.md)
 * [Fundamentals](fundamentals/README.md)
     * [WebGL Fundamentals](fundamentals/WebGL-Fundamentals.md)
     * [WebGL How It Works](fundamentals/WebGL-How-It-Works.md)
@@ -38,5 +38,6 @@
     * [WebGL - Anti-Patterns](misc/WebGL-Anti-Patterns.md)
 * [Helper API Docs](Helper-API-Docs/README.md)
 * [TWGL, A tiny WebGL helper library](TWGL-A-tiny-WebGL-helper-library/README.md)
+* [术语](术语/README.md)
 * [github](https://github.com/greggman/webgl-fundamentals)
 

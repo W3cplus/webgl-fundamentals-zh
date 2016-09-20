@@ -1,4 +1,4 @@
-# Introduction
+# 简介
 
 ## WebGL Fundamentals
 
@@ -38,3 +38,7 @@
 	gitbook serve
 
 执行完上面的命令之后，在浏览器的地址栏中输入[http://localhost:4000/](http://localhost:4000/)可以正常访问。
+
+## 术语
+
+有关于一些专业术语，可以查阅“术语”目录下的`README.md`。
