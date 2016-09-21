@@ -42,3 +42,15 @@
 ## 术语
 
 有关于一些专业术语，可以查阅“术语”目录下的`README.md`。
+
+## 翻译进度
+
+翻译正在进行当中，其中各章节已认领：
+
+- @田淮仁:Fundamentals,Techniques
+- @Gloria:3D Lighting
+- @x_x:Image Processing和Misc
+- @Tail-Go: 2D transition
+- @二师兄:Structure and Organization
+
+@羡辙 大神会将对整个翻译质量做最后的审核。
