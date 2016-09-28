@@ -2,3 +2,4 @@
 gitPush
 *.html
 _book/
+_book/*/*.html
