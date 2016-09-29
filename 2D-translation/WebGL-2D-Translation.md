@@ -4,13 +4,13 @@ Before we move on to 3D let's stick with 2D for a little while longer. Bear with
 
 在开始进入 3D 之前我们先在 2D 停留一段时间。请各位耐心听我说，这篇文章或许对一些同学来说极其浅显，但我还是会用一些篇幅由点到面地加以叙述。
 
-This article is a continuation of a series starting with <a href="/fundamentals/webgl-fundamentals.html">WebGL Fundamentals</a>. If you haven't read them I suggest you read at least the first one, then come back here.
+This article is a continuation of a series starting with <a href="/fundamentals/webgl-fundamentals.html" target="_blank">WebGL Fundamentals</a>. If you haven't read them I suggest you read at least the first one, then come back here.
 
-这篇文章是由 <a href="/fundamentals/webgl-fundamentals.html">WebGL Fundamentals</a> 开始的一系列延续的内容。如果你还没有阅读过这一部分，我建议你至少先阅读第一部分，然后再回来这里。
+这篇文章是由 <a href="/fundamentals/webgl-fundamentals.html" target="_blank">WebGL Fundamentals</a> 开始的一系列延续的内容。如果你还没有阅读过这一部分，我建议你至少先阅读第一部分，然后再回来这里。
 
-Translation is some fancy math name that basically means "to move" something. I suppose moving a sentence from English to Japanese fits as well but in this case we're talking about moving geometry. Using the sample code we ended up with in <a href="/fundamentals/webgl-fundamentals.html">the first post</a> you could easily translate our rectangle just by changing the values passed to setRectangle right? Here's a sample based on our <a href="/fundamentals/webgl-fundamentals.html">previous sample</a>.
+Translation is some fancy math name that basically means "to move" something. I suppose moving a sentence from English to Japanese fits as well but in this case we're talking about moving geometry. Using the sample code we ended up with in <a href="/fundamentals/webgl-fundamentals.html" target="_blank">the first post</a> you could easily translate our rectangle just by changing the values passed to setRectangle right? Here's a sample based on our <a href="/fundamentals/webgl-fundamentals.html" target="_blank">previous sample</a>.
 
-平移（Translation）的本质是一些复杂的数学计算，平移的基本意义是“去移动”一些东西。我认为将一个句子从英语翻译（Translation）成日语也符合定义，但在这个情况下，我们只讨论移动（Translation）几何体。使用我们之前在<a href="/fundamentals/webgl-fundamentals.html">第一篇教程中</a>给出的示例代码你可以通过改变传递给 `setRectangle` 的参数很快地完成矩形的平移。这里给出一个基于<a href="/fundamentals/webgl-fundamentals.html">之前例子</a>的代码示例。
+平移（Translation）的本质是一些复杂的数学计算，平移的基本意义是“去移动”一些东西。我认为将一个句子从英语翻译（Translation）成日语也符合定义，但在这个情况下，我们只讨论移动（Translation）几何体。使用我们之前在<a href="/fundamentals/webgl-fundamentals.html" target="_blank">第一篇教程中</a>给出的示例代码你可以通过改变传递给 `setRectangle` 的参数很快地完成矩形的平移。这里给出一个基于<a href="/fundamentals/webgl-fundamentals.html" target="_blank">之前例子</a>的代码示例。
 
 <!-- more -->
 ```
