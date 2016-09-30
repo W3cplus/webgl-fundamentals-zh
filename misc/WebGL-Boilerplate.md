@@ -2,7 +2,7 @@
 # WebGL 示例
 This is a continuation from WebGL Fundamentals. WebGL sometimes appears complicated to learn because most lessons go over everything all at once. I'll try to avoid that where possible and break it down into smaller pieces.
 
-这篇是[WebGL Fundamentals][1] 的延续。有时候 WebGL 学习起来似乎很复杂，因为大部分的教程需要将所有知识点重温一遍。我会尽量避免这样，并在可能的情况下，分解为小的片段。
+这篇是 <a href="/fundamentals/webgl-fundamentals.html" target="_blank">WebGL Fundamentals</a> 的延续。有时候 WebGL 学习起来似乎很复杂，因为大部分的教程需要将所有知识点重温一遍。我会尽量避免这样，并在可能的情况下，分解为小的片段。
 
 One of things that makes WebGL seem complicated is that you have these 2 tiny functions, a vertex shader and a fragment shader. Those two functions usually run on your GPU which is where all the speed comes from. That's also why they are written in a custom language, a language that matches what a GPU can do. Those 2 functions need to be compiled and linked. That process is, 99% of the time, the same in every WebGL program.
 
@@ -189,18 +189,14 @@ function createProgramFromScripts(
 
 That's most of my minimum set of WebGL boilerplate code. You can find that code here. If you want something slightly more organized check out TWGL.js.
 
-这是我设置 WebGL 最起码的示例代码。[你可以在这里找到这些代码][2]。
-如果你想要更有条理的请查看 [TWGL.js][3]。
+这是我设置 WebGL 最起码的示例代码。<a href="https://github.com/greggman/webgl-fundamentals/blob/master/webgl/resources/webgl-utils.js" target="_blank">你可以在这里找到这些代码</a>。
+如果你想要更有条理的请查看 <a href="http://twgljs.org/" target="_blank">TWGL.js</a>。
 
 The rest of what makes WebGL look complicated is setting up all the inputs to your shaders. See how it works.
 
-让 WebGL 看起来复杂的其余部分是着色器的所有输入设置。请看 [how it works][4]。
+让 WebGL 看起来复杂的其余部分是着色器的所有输入设置。请看 <a href="/fundamentals/WebGL-How-It-Works.html" target="_blank">how it works</a>。
 
 I'd also suggest you read up on less code more fun and check out TWGL.
 
-我也建议你详细研究 [less code more fun][4] 并且查看 [TEGL][3]。
+我也建议你详细研究 [less code more fun][4] 并且查看 <a href="http://twgljs.org/" target="_blank">TWGL</a>。
 
-  [1]: </fundamentals/WebGL-Fundamentals.html>
-  [2]: <https://github.com/greggman/webgl-fundamentals/blob/master/webgl/resources/webgl-utils.js>
-  [3]: <http://twgljs.org/>
-  [4]: </fundamentals/WebGL-How-It-Works.html>
