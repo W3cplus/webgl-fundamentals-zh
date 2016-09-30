@@ -437,7 +437,7 @@ Going through and fixing all the backward triangles gets us to this
 
 That's closer but there's still one more problem. Even with all the triangles facing in the correct direction and with the back facing ones being culled we still have places where triangles that should be in the back are being drawn over triangles that should be in front.
 
-这样的效果接近完美，但在这里还存在一个问题。尽管所有三角形的朝向正确，并且都被背面剔除了，还是有一些应处于后面的三角形被绘制在理应处于前面的三角形之上。
+这样的效果接近完美，但在这里还存在一个问题。尽管所有三角形的朝向正确，并且背面三角形都被剔除了，还是有一些应处于后面的三角形被绘制在理应处于前面的三角形之上。
 
 Enter the DEPTH BUFFER.
 
