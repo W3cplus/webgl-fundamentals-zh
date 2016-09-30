@@ -1,52 +1,52 @@
 # WebGL Boilerplate
-# WebGL ç¤ºä¾‹
+# WebGL Ê¾Àı
 This is a continuation from WebGL Fundamentals. WebGL sometimes appears complicated to learn because most lessons go over everything all at once. I'll try to avoid that where possible and break it down into smaller pieces.
 
-è¿™ç¯‡æ˜¯[WebGL Fundamentals][1] çš„å»¶ç»­ã€‚æœ‰æ—¶å€™ WebGL å­¦ä¹ èµ·æ¥ä¼¼ä¹å¾ˆå¤æ‚ï¼Œå› ä¸ºå¤§éƒ¨åˆ†çš„æ•™ç¨‹éœ€è¦å°†æ‰€æœ‰çŸ¥è¯†ç‚¹é‡æ¸©ä¸€éã€‚æˆ‘ä¼šå°½é‡é¿å…è¿™æ ·ï¼Œå¹¶åœ¨å¯èƒ½çš„æƒ…å†µä¸‹ï¼Œåˆ†è§£ä¸ºå°çš„ç‰‡æ®µã€‚
+ÕâÆªÊÇ[WebGL Fundamentals][1] µÄÑÓĞø¡£ÓĞÊ±ºò WebGL Ñ§Ï°ÆğÀ´ËÆºõºÜ¸´ÔÓ£¬ÒòÎª´ó²¿·ÖµÄ½Ì³ÌĞèÒª½«ËùÓĞÖªÊ¶µãÖØÎÂÒ»±é¡£ÎÒ»á¾¡Á¿±ÜÃâÕâÑù£¬²¢ÔÚ¿ÉÄÜµÄÇé¿öÏÂ£¬·Ö½âÎªĞ¡µÄÆ¬¶Î¡£
 
 One of things that makes WebGL seem complicated is that you have these 2 tiny functions, a vertex shader and a fragment shader. Those two functions usually run on your GPU which is where all the speed comes from. That's also why they are written in a custom language, a language that matches what a GPU can do. Those 2 functions need to be compiled and linked. That process is, 99% of the time, the same in every WebGL program.
 
-è®© WebGL çœ‹ä¼¼å¤æ‚çš„å…¶ä¸­ä¸€ä»¶äº‹æ˜¯ä½ æœ‰ä¸¤ä¸ªå°å‡½æ•°ï¼Œé¡¶ç‚¹ç€è‰²å™¨ï¼ˆvertex shaderï¼‰å’Œç‰‡å…ƒç€è‰²å™¨ï¼ˆfragment shaderï¼‰ã€‚è¿™ä¸¤ä¸ªå‡½æ•°é€šå¸¸è¿è¡Œåœ¨ GPU ä¸­ï¼ŒGPU æ˜¯æ‰€æœ‰é€Ÿåº¦çš„æ¥æºã€‚è¿™ä¹Ÿæ˜¯ä¸ºä»€ä¹ˆå®ƒä»¬ç”¨ä¸€ç§ GPU èƒ½å¤Ÿè¿è¡Œçš„è‡ªå®šä¹‰è¯­è¨€ç¼–è¯‘çš„åŸå› ã€‚è¿™ä¸¤ä¸ªå‡½æ•°éœ€è¦ç¼–è¯‘å’Œé“¾æ¥ã€‚
-è¿™ä¸€è¿‡ç¨‹ï¼Œ99% çš„æ—¶é—´ï¼Œéƒ½æ˜¯åœ¨åŒä¸€ä¸ª WebGL ç¨‹åºä¸­è¿›è¡Œçš„ã€‚
+ÈÃ WebGL ¿´ËÆ¸´ÔÓµÄÆäÖĞÒ»¼şÊÂÊÇÄãÓĞÁ½¸öĞ¡º¯Êı£¬¶¥µã×ÅÉ«Æ÷£¨vertex shader£©ºÍÆ¬Ôª×ÅÉ«Æ÷£¨fragment shader£©¡£ÕâÁ½¸öº¯ÊıÍ¨³£ÔËĞĞÔÚ GPU ÖĞ£¬GPU ÊÇËùÓĞËÙ¶ÈµÄÀ´Ô´¡£ÕâÒ²ÊÇÎªÊ²Ã´ËüÃÇÓÃÒ»ÖÖ GPU ÄÜ¹»ÔËĞĞµÄ×Ô¶¨ÒåÓïÑÔ±àÒëµÄÔ­Òò¡£ÕâÁ½¸öº¯ÊıĞèÒª±àÒëºÍÁ´½Ó¡£
+ÕâÒ»¹ı³Ì£¬99% µÄÊ±¼ä£¬¶¼ÊÇÔÚÍ¬Ò»¸ö WebGL ³ÌĞòÖĞ½øĞĞµÄ¡£
 
 Here's the boilerplate code for compiling a shader.
 
-è¿™æ˜¯ç¼–è¾‘ä¸€ä¸ªç€è‰²å™¨çš„ç¤ºä¾‹ä»£ç ã€‚
+ÕâÊÇ±à¼­Ò»¸ö×ÅÉ«Æ÷µÄÊ¾Àı´úÂë¡£
 
 ```
 /**
  * Creates and compiles a shader.
- *åˆ›å»ºå¹¶ç¼–è¯‘ä¸€ä¸ªç€è‰²å™¨
+ *´´½¨²¢±àÒëÒ»¸ö×ÅÉ«Æ÷
  *
  * @param {!WebGLRenderingContext} gl The WebGL Context.
- * gl ä¸ºWebGL ä¸Šä¸‹æ–‡ã€‚
+ * gl ÎªWebGL ÉÏÏÂÎÄ¡£
  * @param {string} shaderSource The GLSL source code for the shader.
- * shaderSource ä¸ºGLSL ä¸­ç€è‰²å™¨æºç ã€‚
+ * shaderSource ÎªGLSL ÖĞ×ÅÉ«Æ÷Ô´Âë¡£
  * @param {number} shaderType The type of shader, VERTEX_SHADER or
  *     FRAGMENT_SHADER.
- * shaderType ä¸ºç€è‰²å™¨ç±»å‹ï¼ŒVERTEX_SHADER æˆ–è€… FRAGMENT_SHADERã€‚
+ * shaderType Îª×ÅÉ«Æ÷ÀàĞÍ£¬VERTEX_SHADER »òÕß FRAGMENT_SHADER¡£
  * @return {!WebGLShader} The shader.
- * è¿”å›ç€è‰²å™¨ã€‚
+ * ·µ»Ø×ÅÉ«Æ÷¡£
  */
 function compileShader(gl, shaderSource, shaderType) {
   // Create the shader object
-  // åˆ›å»ºç€è‰²å™¨å¯¹è±¡
+  // ´´½¨×ÅÉ«Æ÷¶ÔÏó
   var shader = gl.createShader(shaderType);
  
   // Set the shader source code.
-  // è®¾ç½®ç€è‰²å™¨æºç 
+  // ÉèÖÃ×ÅÉ«Æ÷Ô´Âë
   gl.shaderSource(shader, shaderSource);
  
   // Compile the shader
-  // ç¼–è¯‘ç€è‰²å™¨
+  // ±àÒë×ÅÉ«Æ÷
   gl.compileShader(shader);
  
   // Check if it compiled
-  // æ£€æŸ¥ç€è‰²å™¨æ˜¯å¦ç¼–è¯‘æˆåŠŸ
+  // ¼ì²é×ÅÉ«Æ÷ÊÇ·ñ±àÒë³É¹¦
   var success = gl.getShaderParameter(shader, gl.COMPILE_STATUS);
   if (!success) {
     // Something went wrong during compilation; get the error
-    // ç¼–è¯‘è¿‡ç¨‹å‡ºé”™ï¼›æŠ›å‡ºå¼‚å¸¸
+    // ±àÒë¹ı³Ì³ö´í£»Å×³öÒì³£
     throw "could not compile shader:" + gl.getShaderInfoLog(shader);
   }
  
@@ -56,42 +56,42 @@ function compileShader(gl, shaderSource, shaderType) {
 
 And the boilerplate code for linking 2 shaders into a program.
 
-æ¥ä¸‹æ¥çš„ç¤ºä¾‹ä»£ç æ˜¯å°†ä¸¤ä¸ªç€è‰²å™¨è¿æ¥åˆ°ä¸€ä¸ªç¨‹åºä¸­ã€‚
+½ÓÏÂÀ´µÄÊ¾Àı´úÂëÊÇ½«Á½¸ö×ÅÉ«Æ÷Á¬½Óµ½Ò»¸ö³ÌĞòÖĞ
 
 ```
 /**
  * Creates a program from 2 shaders.
- * ä¸ºä¸¤ä¸ªç€è‰²å™¨åˆ›å»ºä¸€ä¸ªç¨‹åºã€‚
+ * ÎªÁ½¸ö×ÅÉ«Æ÷´´½¨Ò»¸ö³ÌĞò¡£
  *
  * @param {!WebGLRenderingContext) gl The WebGL context.
- * gl ä¸º WebGL ä¸Šä¸‹æ–‡ã€‚
+ * gl Îª WebGL ÉÏÏÂÎÄ¡£
  * @param {!WebGLShader} vertexShader A vertex shader.
- * vertexShader ä¸ºé¡¶ç‚¹ç€è‰²å™¨ã€‚
+ * vertexShader Îª¶¥µã×ÅÉ«Æ÷¡£
  * @param {!WebGLShader} fragmentShader A fragment shader.
-  * fragmentShader ä¸ºç‰‡æ®µç€è‰²å™¨ã€‚
+  * fragmentShader ÎªÆ¬¶Î×ÅÉ«Æ÷¡£
  * @return {!WebGLProgram} A program.
- * è¿”å›ä¸€ä¸ªç¨‹åºã€‚
+ * ·µ»ØÒ»¸ö³ÌĞò¡£
  */
 function createProgram(gl, vertexShader, fragmentShader) {
   // create a program.
-  // åˆ›å»ºä¸€ä¸ªç¨‹åºã€‚
+  // ´´½¨Ò»¸ö³ÌĞò¡£
   var program = gl.createProgram();
  
   // attach the shaders.
-  // ç»‘å®šç€è‰²å™¨ã€‚
+  // °ó¶¨×ÅÉ«Æ÷¡£
   gl.attachShader(program, vertexShader);
   gl.attachShader(program, fragmentShader);
  
   // link the program.
-  // è¿æ¥ç¨‹åºã€‚
+  // Á¬½Ó³ÌĞò¡£
   gl.linkProgram(program);
  
   // Check if it linked.
-  // æ£€æŸ¥ç¨‹åºæ˜¯å¦è¿æ¥æˆåŠŸã€‚
+  // ¼ì²é³ÌĞòÊÇ·ñÁ¬½Ó³É¹¦¡£
   var success = gl.getProgramParameter(program, gl.LINK_STATUS);
   if (!success) {
       // something went wrong with the link
-      // è¿æ¥å‡ºé”™
+      // Á¬½Ó³ö´í
       throw ("program filed to link:" + gl.getProgramInfoLog (program));
   }
  
@@ -101,44 +101,44 @@ function createProgram(gl, vertexShader, fragmentShader) {
 
 Of course how you decide to handle errors might be different. Throwing exceptions might not be the best way to handle things. Still, those few lines of code are pretty much the same in nearly every WebGL program.
 
-å½“ç„¶ä½ å†³å®šå¦‚ä½•é”™è¯¯çš„æ–¹å¼å¯èƒ½æœ‰æ‰€ä¸åŒã€‚æŠ›å‡ºå¼‚å¸¸å¯èƒ½ä¸æ˜¯æœ€å¥½çš„å¤„ç†æ–¹å¼ã€‚å°½ç®¡å¦‚æ­¤ï¼Œè¿™å‡ è¡Œä»£ç å‡ ä¹åœ¨æ¯ä¸€ä¸ª WebGL ç¨‹åºä¸­éƒ½æ˜¯ç›¸åŒçš„ã€‚
+µ±È»Äã¾ö¶¨ÈçºÎ´íÎóµÄ·½Ê½¿ÉÄÜÓĞËù²»Í¬¡£Å×³öÒì³£¿ÉÄÜ²»ÊÇ×îºÃµÄ´¦Àí·½Ê½¡£¾¡¹ÜÈç´Ë£¬Õâ¼¸ĞĞ´úÂë¼¸ºõÔÚÃ¿Ò»¸ö WebGL ³ÌĞòÖĞ¶¼ÊÇÏàÍ¬µÄ¡£
 
 I like to store my shaders in non javascript <script> tags. It makes them easy to edit so I use code like this.
 
-æˆ‘å–œæ¬¢å°†æˆ‘çš„ç€è‰²å™¨å­˜æ”¾åœ¨é javascript æ ‡ç­¾ä¸­ã€‚è¿™ä½¿å¾—å®ƒä»¬å®¹æ˜“ç¼–è¾‘ï¼Œæ‰€ä»¥æˆ‘è¿™æ ·ä½¿ç”¨ã€‚
+ÎÒÏ²»¶½«ÎÒµÄ×ÅÉ«Æ÷´æ·ÅÔÚ·Ç javascript ±êÇ©ÖĞ¡£ÕâÊ¹µÃËüÃÇÈİÒ×±à¼­£¬ËùÒÔÎÒÕâÑùÊ¹ÓÃ¡£
 
 ```
 /**
  * Creates a shader from the content of a script tag.
- * åˆ›å»ºä¸€ä¸ªä¸Šä¸‹æ–‡æ¥è‡ª script æ ‡ç­¾çš„ç€è‰²å™¨ã€‚
+ * ´´½¨Ò»¸öÉÏÏÂÎÄÀ´×Ô script ±êÇ©µÄ×ÅÉ«Æ÷¡£
  *
  * @param {!WebGLRenderingContext} gl The WebGL Context.
- * gl ä¸º WebGL ä¸Šä¸‹æ–‡ã€‚
+ * gl Îª WebGL ÉÏÏÂÎÄ¡£
  * @param {string} scriptId The id of the script tag.
- * scriptId ä¸º script æ ‡ç­¾çš„idã€‚
+ * scriptId Îª script ±êÇ©µÄid¡£
  * @param {string} opt_shaderType. The type of shader to create.
- * opt_shaderType ä¸ºéœ€è¦åˆ›å»ºçš„ç€è‰²å™¨çš„ç±»å‹ã€‚
+ * opt_shaderType ÎªĞèÒª´´½¨µÄ×ÅÉ«Æ÷µÄÀàĞÍ¡£
  *     If not passed in will use the type attribute from the
  *     script tag.
- * å¦‚æœæ²¡æœ‰ä¼ é€’è¿™ä¸€å‚æ•°ï¼Œå°†ä¼šä½¿ç”¨ script æ ‡ç­¾ä¸­çš„ type å±æ€§å€¼ã€‚
+ * Èç¹ûÃ»ÓĞ´«µİÕâÒ»²ÎÊı£¬½«»áÊ¹ÓÃ script ±êÇ©ÖĞµÄ type ÊôĞÔÖµ¡£
  * @return {!WebGLShader} A shader.
- * è¿”å›ä¸€ä¸ªç€è‰²å™¨ã€‚
+ * ·µ»ØÒ»¸ö×ÅÉ«Æ÷¡£
  */
 function createShaderFromScript(gl, scriptId, opt_shaderType) {
   // look up the script tag by id.
-  // æŸ¥æ‰¾ script æ ‡ç­¾çš„idã€‚
+  // ²éÕÒ script ±êÇ©µÄid¡£
   var shaderScript = document.getElementById(scriptId);
   if (!shaderScript) {
     throw("*** Error: unknown script element" + scriptId);
   }
  
   // extract the contents of the script tag.
-  // è·å– script æ ‡ç­¾ä¸­çš„å†…å®¹ã€‚
+  // »ñÈ¡ script ±êÇ©ÖĞµÄÄÚÈİ¡£
   var shaderSource = shaderScript.text;
  
   // If we didn't pass in a type, use the 'type' from
   // the script tag.
-  // å¦‚æœæ²¡æœ‰ä¼ é€’ç±»å‹å‚æ•°ï¼Œå°±ä½¿ç”¨ script æ ‡ç­¾çš„â€˜typeâ€™çš„å€¼ã€‚
+  // Èç¹ûÃ»ÓĞ´«µİÀàĞÍ²ÎÊı£¬¾ÍÊ¹ÓÃ script ±êÇ©µÄ¡®type¡¯µÄÖµ¡£
   if (!opt_shaderType) {
     if (shaderScript.type == "x-shader/x-vertex") {
       opt_shaderType = gl.VERTEX_SHADER;
@@ -155,7 +155,7 @@ function createShaderFromScript(gl, scriptId, opt_shaderType) {
 
 Now to compile a shader I can just do.
 
-ç°åœ¨æˆ‘å¯ä»¥ç¼–è¯‘ç€è‰²å™¨äº†ã€‚
+ÏÖÔÚÎÒ¿ÉÒÔ±àÒë×ÅÉ«Æ÷ÁË¡£
 
 ```
 var shader = compileShaderFromScript(gl, "someScriptTagId");
@@ -163,21 +163,21 @@ var shader = compileShaderFromScript(gl, "someScriptTagId");
 
 I'll usually go one step further and make a function to compile two shaders from script tags, attach them to a program and link them.
 
-æˆ‘é€šå¸¸ä¼šæ›´è¿›ä¸€æ­¥åœ°åˆ©ç”¨ä¸€ä¸ªå‡½æ•°ç¼–è¾‘ä¸¤ä¸ªæ¥è‡ª script æ ‡ç­¾çš„ç€è‰²å™¨ï¼ŒæŠŠä»–ä»¬è¿æ¥åˆ°ä¸€ä¸ªç¨‹åºï¼Œå¹¶é“¾æ¥ä»–ä»¬ã€‚
+ÎÒÍ¨³£»á¸ü½øÒ»²½µØÀûÓÃÒ»¸öº¯Êı±à¼­Á½¸öÀ´×Ô script ±êÇ©µÄ×ÅÉ«Æ÷£¬°ÑËûÃÇÁ¬½Óµ½Ò»¸ö³ÌĞò£¬²¢Á´½ÓËûÃÇ¡£
 
 ```
 /**
  * Creates a program from 2 script tags.
- * ä»ä¸¤ä¸ª script æ ‡ç­¾ä¸­åˆ›å»ºä¸€ä¸ªç¨‹å‹‹ã€‚
+ * ´ÓÁ½¸ö script ±êÇ©ÖĞ´´½¨Ò»¸ö³ÌÑ«¡£
  *
  * @param {!WebGLRenderingContext} gl The WebGL Context.
- * gl ä¸º WebGL çš„ä¸Šä¸‹æ–‡ã€‚
+ * gl Îª WebGL µÄÉÏÏÂÎÄ¡£
  * @param {string} vertexShaderId The id of the vertex shader script tag.
- * vertexShaderId ä¸º å®šä¹‰é¡¶ç‚¹ç€è‰²å™¨çš„ script æ ‡ç­¾çš„ idã€‚
+ * vertexShaderId Îª ¶¨Òå¶¥µã×ÅÉ«Æ÷µÄ script ±êÇ©µÄ id¡£
  * @param {string} fragmentShaderId The id of the fragment shader script tag.
-  * fragmentShaderId ä¸º å®šä¹‰ç‰‡å…ƒç€è‰²å™¨çš„ script æ ‡ç­¾çš„ idã€‚
+  * fragmentShaderId Îª ¶¨ÒåÆ¬Ôª×ÅÉ«Æ÷µÄ script ±êÇ©µÄ id¡£
  * @return {!WebGLProgram} A program
- * è¿”å›ä¸€ä¸ªç¨‹åºã€‚
+ * ·µ»ØÒ»¸ö³ÌĞò¡£
  */
 function createProgramFromScripts(
     gl, vertexShaderId, fragmentShaderId) {
@@ -189,18 +189,18 @@ function createProgramFromScripts(
 
 That's most of my minimum set of WebGL boilerplate code. You can find that code here. If you want something slightly more organized check out TWGL.js.
 
-è¿™æ˜¯æˆ‘è®¾ç½® WebGL æœ€èµ·ç çš„ç¤ºä¾‹ä»£ç ã€‚[ä½ å¯ä»¥åœ¨è¿™é‡Œæ‰¾åˆ°è¿™äº›ä»£ç ][2]ã€‚
-å¦‚æœä½ æƒ³è¦æ›´æœ‰æ¡ç†çš„è¯·æŸ¥çœ‹ [TWGL.js][3]ã€‚
+ÕâÊÇÎÒÉèÖÃ WebGL ×îÆğÂëµÄÊ¾Àı´úÂë¡£[Äã¿ÉÒÔÔÚÕâÀïÕÒµ½ÕâĞ©´úÂë][2]¡£
+Èç¹ûÄãÏëÒª¸üÓĞÌõÀíµÄÇë²é¿´ [TWGL.js][3]¡£
 
 The rest of what makes WebGL look complicated is setting up all the inputs to your shaders. See how it works.
 
-è®© WebGL çœ‹èµ·æ¥å¤æ‚çš„å…¶ä½™éƒ¨åˆ†æ˜¯ç€è‰²å™¨çš„æ‰€æœ‰è¾“å…¥è®¾ç½®ã€‚è¯·çœ‹ [how it works][4]ã€‚
+ÈÃ WebGL ¿´ÆğÀ´¸´ÔÓµÄÆäÓà²¿·ÖÊÇ×ÅÉ«Æ÷µÄËùÓĞÊäÈëÉèÖÃ¡£Çë¿´ [how it works][4]¡£
 
 I'd also suggest you read up on less code more fun and check out TWGL.
 
-æˆ‘ä¹Ÿå»ºè®®ä½ è¯¦ç»†ç ”ç©¶ [less code more fun][4] å¹¶ä¸”æŸ¥çœ‹ [TEGL][3]ã€‚
+ÎÒÒ²½¨ÒéÄãÏêÏ¸ÑĞ¾¿ [less code more fun][4] ²¢ÇÒ²é¿´ [TEGL][3]¡£
 
-[1]: </fundamentals/WebGL-Fundamentals.html>
-[2]: <https://github.com/greggman/webgl-fundamentals/blob/master/webgl/resources/webgl-utils.js>
-[3]: <http://twgljs.org/>
-[4]: </fundamentals/WebGL-How-It-Works.html>
+  [1]: </fundamentals/WebGL-Fundamentals.html>
+  [2]: <https://github.com/greggman/webgl-fundamentals/blob/master/webgl/resources/webgl-utils.js>
+  [3]: <http://twgljs.org/>
+  [4]: </fundamentals/WebGL-How-It-Works.html>
