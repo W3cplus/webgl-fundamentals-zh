@@ -8,7 +8,7 @@ This post is a continuation of a series of posts about WebGL. The first [started
 
 In the last post we went over how 2D matrices worked. We talked about how translation, rotation, scaling, and even projecting from pixels into clip space can all be done by 1 matrix and some magic matrix math. To do 3D is only a small step from there.
 
-上一篇文章中，我们学习了二维矩阵（2D matrices）的工作方式。如位移（translation）、旋转（rotation）、缩放（scale）、像素空间到裁切空间的投射（projection from pixels into clip space），这些操作都能通过矩阵运算，然后用1个矩阵表示。现在，我们只需在此基础上稍加改动，便能实现3D效果。
+上一篇文章中，我们学习了二维矩阵（2D matrices）的工作方式。如平移（translation）、旋转（rotation）、缩放（scale）、像素空间到剪切空间的映射（projection from pixels into clip space），这些操作都能通过矩阵运算，然后用1个矩阵表示。现在，我们只需在此基础上稍加改动，便能实现3D效果。
 
 In our previous 2D examples we had 2D points (x, y) that we multiplied by a 3x3 matrix. To do 3D we need 3D points (x, y, z) and a 4x4 matrix.
 
@@ -228,7 +228,7 @@ function make2DProjection(width, height) {
 
 which converted from pixels to clip space. For our first attempt at expanding it to 3D let's try
 
-上面的函数将坐标从像素空间投射到了裁切空间。
+上面的函数将坐标从像素空间映射到了裁剪空间。
 我们尝试将它扩展为3D版本：
 ```js
 function make2DProjection(width, height, depth) {
@@ -244,11 +244,11 @@ function make2DProjection(width, height, depth) {
 
 Just like we needed to convert from pixels to clip space for X and Y, for Z we need to do the same thing. In this case I'm making the Z axis pixel units as well. I'll pass in some value similar to width for the depth so our space will be 0 to width pixels wide, 0 to height pixels tall, but for depth it will be -depth / 2 to +depth / 2.
 
-同X，Y坐标一样，我们可以用相同的方法将Z坐标从像素空间投射到裁切空间。与width(宽度)相似，可以将depth(深度)值传入函数，则像素空间的宽度范围为0~width，高度范围0~height，深度范围-depth/2 ~ +depth/2。
+同X，Y坐标一样，我们可以用相同的方法将Z坐标从像素空间映射到裁剪空间。与width(宽度)相似，可以将depth(深度)值传入函数，则像素空间的宽度范围为0~width，高度范围0~height，深度范围-depth/2 ~ +depth/2。
 
 Finally we need to to update the code that computes the matrix.
 
-最后，需要修改投射矩阵：
+最后，需要修改映射矩阵：
 ```js
 // Compute the matrices
   var projectionMatrix =
@@ -295,7 +295,7 @@ Moving the sliders it's pretty hard to tell that it's 3D. Let's try coloring eac
 
 Here's the new vertex shader
 
-尽管能不断移动滑块，但还是很难分辨出这是3D图形，所以我们尝试给每个矩形添加不同颜色。为了达到这一目的，需要给顶点着色器添加另外的attribute，然后通过varing传递给片段着色器。
+尽管能不断移动滑块，但还是很难分辨出这是3D图形，所以我们尝试给每个矩形添加不同颜色。为了达到这一目的，需要给顶点着色器添加另外的attribute，然后通过varing传递给片元着色器。
 
 新的顶点着色器：
 ```html
@@ -319,7 +319,7 @@ void main() {
 
 And we need to use that color in the fragment shader
 
-然后在片段着色器（fragment shader）中使用varing：
+然后在片元着色器（fragment shader）中使用varing：
 ```html
 <script id="3d-vertex-shader" type="x-shader/x-fragment">
 precision mediump float;
@@ -335,7 +335,7 @@ void main() {
 
 We need to lookup the location to supply the colors, then setup another buffer and attribute to give it the colors.
 
-接下来，需要在相应位置应用颜色，所以再创建一个缓冲器（buffer）和attribute用来接收颜色：
+接下来，需要在相应位置应用颜色，所以再创建一个缓冲区（buffer）和attribute用来接收颜色：
 ```js
 ...
   var colorLocation = gl.getAttribLocation(program, "a_color");
@@ -399,11 +399,11 @@ WebGL有能力选择只绘制正面三角形或者背面三角形。我们可以
 
 which we do just once, right at the start of our program. With that feature turned on, WebGL defaults to "culling" back facing triangles. "Culling" in this case is a fancy word for "not drawing".
 
-只需在程序开始的时候开启一次即可。该功能开启后，WebGL会默认“Culling”背面三角形。“Culling”在这里意为“不予绘制”。
+只需在程序开始的时候开启一次即可。该功能开启后，WebGL会默认对三角形进行“背面剔除（Culling）”，也就是剔除背面三角形。
 
 Note that as far as WebGL is concerned, whether or not a triangle is considered to be going clockwise or counter clockwise depends on the vertices of that triangle in clip space. In other words, WebGL figures out whether a triangle is front or back AFTER you've applied math to the vertices in the vertex shader. That means for example a clockwise triangle that is scaled in X by -1 becomes a counter clockwise triangle or a clockwise triangle rotated 180 degrees becomes a couter clockwise triangle. Because we had CULL_FACE disabled we can see both clockwise(front) and counter clockwise(back) triangles. Now that we've turned it on, any time a front facing triangle flips around either because of scaling or rotation or for whatever reason, WebGL won't draw it. That's a good thing since as your turn something around in 3D you generally want whichever triangles are facing you to be considered front facing.
 
-注意，在WebGL中，判断一个三角形是顺时针还是逆时针的依据是：该三角形在裁切空间的顶点顺序。也就是说，WebGL会在对顶点着色器中的顶点应用数学运算后断定一个三角形的朝向是正面或是背面。比如，一个顶点顺序为顺时针的三角形，在X方向上应用值为-1的缩放，或者旋转180°后都会变成一个逆时针的三角形。因为**CULL_FACE**功能还未开启，所以我们可以同时看到顺时针（正面）三角形和逆时针（背面）三角形。该功能开启后，当一个正面三角形被应用缩放、旋转，或其它原因而左右翻转的时候，WebGL都不会绘制它。这是个不错的功能，因为当翻转3D图形的时候始终希望呈现面向我们的三角形。
+注意，在WebGL中，判断一个三角形是顺时针还是逆时针的依据是：该三角形在裁剪空间的顶点顺序。也就是说，WebGL会在对顶点着色器中的顶点应用数学运算后断定一个三角形的朝向是正面或是背面。比如，一个顶点顺序为顺时针的三角形，在X方向上应用值为-1的缩放，或者旋转180°后都会变成一个逆时针的三角形。因为**CULL_FACE**功能还未开启，所以我们可以同时看到顺时针（正面）三角形和逆时针（背面）三角形。该功能开启后，当一个正面三角形被应用缩放、旋转，或其它原因而左右翻转的时候，WebGL都不会绘制它。这是个不错的功能，因为当翻转3D图形的时候始终希望呈现面向我们的三角形。
 
 With CULL_FACE turned on this is what we get
 
@@ -437,26 +437,25 @@ Going through and fixing all the backward triangles gets us to this
 
 That's closer but there's still one more problem. Even with all the triangles facing in the correct direction and with the back facing ones being culled we still have places where triangles that should be in the back are being drawn over triangles that should be in front.
 
-这样的效果接近完美，但在这里还存在一个问题。尽管所有三角形的朝向正确，并且背面三角形都被设置为“不予绘制”，还是有一些应处于后面的三角形被绘制在理应处于前面的三角形之上。
 
 Enter the DEPTH BUFFER.
 
-让我们来看一看深度缓冲器（DEPTH BUFFER）。
+让我们来看一看深度缓冲区（DEPTH BUFFER）。
 
 A depth buffer, sometimes called a Z-Buffer, is a rectangle of depth pixels, one depth pixel for each color pixel used to make the image. As WebGL draws each color pixel it can also draw a depth pixel. It does this based on the values we return from the vertex shader for Z. Just like we had to convert to clip space for X and Y, Z is also in clip space or (-1 to +1). That value is then converted into a depth space value (0 to +1). Before WebGL draws a color pixel it will check the corresponding depth pixel. If the depth value for the pixel it's about to draw is greater than the value of the corresponding depth pixel then WebGL does not draw the new color pixel. Otherwise it draws both the new color pixel with the color from your fragment shader AND it draws the depth pixel with the new depth value. This means, pixels that are behind other pixels won't get drawn.
 
-深度缓冲器有时也被称作Z-Buffer，它由一连串的深度像素组成。每次的成像都会用到每个颜色像素对应的深度像素。WebGL绘制每个颜色像素的同时，都会绘制其深度像素。深度像素的绘制是基于顶点着色器中顶点的Z坐标。就像X坐标和Y坐标一样，Z坐标同样处于裁切空间或者说在（-1 ~ +1）中。在此之后Z又会被转换为深度空间值（0 ~ +1）。WebGL在绘制颜色像素前，会检查该像素对应的深度像素。如果将要绘制的深度值大于当前像素的深度值，那么新的颜色像素将不会被绘制。否则，不仅会从片段着色器中取出颜色来绘制新的颜色像素，还会以新的深度值来绘制深度像素。也就是说，藏在其它像素之后的像素都不会被绘制。
+深度缓冲区有时也被称作Z-Buffer，它由一连串的深度像素组成。每次的成像都会用到每个颜色像素对应的深度像素。WebGL绘制每个颜色像素的同时，都会绘制其深度像素。深度像素的绘制是基于顶点着色器中顶点的Z坐标。就像X坐标和Y坐标一样，Z坐标同样处于裁剪空间或者说在（-1 ~ +1）中。在此之后Z又会被转换为深度空间值（0 ~ +1）。WebGL在绘制颜色像素前，会检查该像素对应的深度像素。如果将要绘制的深度值大于当前像素的深度值，那么新的颜色像素将不会被绘制。否则，不仅会从片元着色器中取出颜色来绘制新的颜色像素，还会以新的深度值来绘制深度像素。也就是说，藏在其它像素之后的像素都不会被绘制。
 
 We can turn on this feature nearly as simply as we turned on culling with
 
-我们可以像开启“Culling”一样轻松的地开启这个功能：
+我们可以像开启“背面剔除”一样轻松的地开启这个功能：
 ```js
 gl.enable(gl.DEPTH_TEST);
 ```
 
 We also need to clear the depth buffer back to 1.0 before we start drawing.
 
-在开始绘制图形前，还需要将深度缓冲器重置为1.0：
+在开始绘制图形前，还需要将深度缓冲区重置为1.0：
 ```js
 // Draw the scene.
   function drawScene() {
@@ -473,7 +472,7 @@ And now we get
 
 which is 3D!
 
-这就是3D!!!
+这就是3D！！！
 
 In the next post I'll go over how to make it have perspective.
 
