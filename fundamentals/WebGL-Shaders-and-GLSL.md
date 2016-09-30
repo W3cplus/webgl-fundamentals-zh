@@ -2,7 +2,6 @@
 
 # WebGL 着色器和 GLSL
 
-
 This is a continuation from WebGL Fundamentals. If you haven't read about how WebGL works you might want to read this first.
 
 这篇文章是 [WebGL 基础][1]的续集。如果你还没有阅读过 WebGL 怎样工作的，你可以参考[这里][2]。
@@ -13,7 +12,7 @@ We've talked about shaders and GLSL but haven't really given them any specific d
 
 As mentioned in how it works WebGL requires 2 shaders every time you draw something. A vertex shader and a fragment shader. Each shader is a function. A vertex shader and fragment shader are linked together into a shader program (or just program). A typical WebGL app will have many shader programs.
 
-在 [WebGL 的工作原理][3]中，我们提到过，当你每次绘制图像时，WebGL 需要两个着色器。一个是顶点着色器，一个是片元着色器。顶点着色器和片元着色器在一个着色器程序中(或者说就是 程序 )。一个典型的 WebGL app 会包含很多着色器程序。
+在 [WebGL 的工作原理][3] 中，我们提到过，当你每次绘制图像时，WebGL 需要两个着色器。一个是顶点着色器，一个是片元着色器。顶点着色器和片元着色器在一个着色器程序中（或者称为 程序 ）。一个典型的 WebGL app 会包含很多着色器程序。
 
 ## 顶点着色器
 A Vertex Shader's job is to generate clipspace coordinates. It always takes the form
@@ -111,7 +110,7 @@ var offsetLoc = gl.getUniformLocation(someProgram, "u_offset");
 ```
 And then before drawing we'd set the uniform
 
-然后， 在绘制之前，我们需要设置 uniform 的值
+然后，在绘制之前，我们需要设置 uniform 的值
 ```
 gl.uniform4fv(offsetLoc, [1, 0, 0, 0]);  // 向右偏移半个屏幕
 ```
@@ -317,7 +316,7 @@ The example above is a mostly nonsense example. It doesn't generally make sense 
 ## GLSL
 GLSL stands for Graphics Library Shader Language. It's the language shaders are written in. It has some special semi unique features that are certainly not common in JavaScript. It's designed to do the math that is commonly needed to compute things for rasterizing graphics. So for example it has built in types like vec2, vec3, and vec4 which represent 2 values, 3 values, and 4 values respectively. Similarly it has mat2, mat3 and mat4 which represent 2x2, 3x3, and 4x4 matrices. You can do things like multiply a vec by a scalar.
 
-GLSL 全称是 Graphics Library Shader Language. 着色器就是用这种语言写的。他有一写特殊的半独特的功能，这些功能在 JavaScript 里面是不常见的。它设计的初衷就是做一些数学运算，将计算的结果用来栅格化图像。所以，例如，他有一些内置的类型，像 vec2，vec3，和 vec4，分别代表着 2 个值，3个值，和4个值。另外，他还有 mat2，mat3 和 mat4 分别代表着 2x2, 3x3 和 4x4 的矩阵。当然，你还可以做一些数学运算，比如使用一个常量乘以一个向量 (vector)。
+GLSL 全称是 Graphics Library Shader Language。 着色器就是用这种语言写的。他有一些特殊的半独特的功能，这些功能在 JavaScript 里面是不常见的。它设计的初衷就是做一些数学运算，将计算的结果用来栅格化图像。所以，例如，他有一些内置的类型，像 vec2，vec3，和 vec4，分别代表着 2 个值，3个值，和4个值。另外，他还有 mat2，mat3 和 mat4 分别代表着 2x2, 3x3 和 4x4 的矩阵。当然，你还可以做一些数学运算，比如使用一个常量乘以一个向量 (vector)。
 ```
 vec4 a = vec4(1, 2, 3, 4);
 vec4 b = a * 2.0;

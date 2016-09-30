@@ -32,6 +32,7 @@
     * [WebGL Text - Using a Texture](techniques/WebGL-Text-Using-a-Texture.md)
     * [WebGL Text - Using a Glyph Texture](techniques/WebGL-Text-Using-a-Glyph-Texture.md)
 * [Misc](misc/README.md)
+    * [WebGL Setup And Installation](misc/WebGL-Setup-And-Installation.md)
     * [WebGL Boilerplate](misc/WebGL-Boilerplate.md)
     * [WebGL Resizing the Canvas](misc/WebGL-Resizing-the-Canvas.md)
     * [WebGL - Animation](misc/WebGL-Animation.md)
