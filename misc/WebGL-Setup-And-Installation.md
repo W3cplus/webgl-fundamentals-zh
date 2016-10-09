@@ -1,58 +1,58 @@
 # WebGL Setup and Installation
-# WebGLµÄÉèÖÃÓë°²×°
+# WebGLçš„è®¾ç½®ä¸å®‰è£…
 
 Techincally you don't need anything other than a web browser to do WebGL development. Go to [jsfiddle.net][1] or [jsbin.com][2] or [codepen.io][3] and just start applying the lessons here.
 
-´Ó¼¼ÊõÉÏ½²£¬Äã½ö½öĞèÒªÒ»¸öÍøÒ³ä¯ÀÀÆ÷×ö WebGL ¿ª·¢¡£¿ÉÒÔµ½ [jsfiddle.net][1]¡¢ [jsbin.com][2] »òÕß [codepen.io][3] Ó¦ÓÃÕâÀïµÄ½Ì³ÌÄÚÈİ¡£
+ä»æŠ€æœ¯ä¸Šè®²ï¼Œä½ ä»…ä»…éœ€è¦ä¸€ä¸ªç½‘é¡µæµè§ˆå™¨åš WebGL å¼€å‘ã€‚å¯ä»¥åˆ° [jsfiddle.net][1]ã€ [jsbin.com][2] æˆ–è€… [codepen.io][3] åº”ç”¨è¿™é‡Œçš„æ•™ç¨‹å†…å®¹ã€‚
 
 On all of them you can reference external scripts by adding a <script src="..."></script> tag pair if you want to use external scripts.
 
-Èç¹ûÄãÏëÊ¹ÓÃÍâ²¿½Å±¾£¬ËùÓĞµÄÄÚÈİÄã¶¼¿ÉÒÔÍ¨¹ıÒıÓÃÍâ²¿½Å±¾±êÇ© <script src="..."> À´Ê¹ÓÃ¡£
+å¦‚æœä½ æƒ³ä½¿ç”¨å¤–éƒ¨è„šæœ¬ï¼Œæ‰€æœ‰çš„å†…å®¹ä½ éƒ½å¯ä»¥é€šè¿‡å¼•ç”¨å¤–éƒ¨è„šæœ¬æ ‡ç­¾ &lt;script src="..."&gt; æ¥ä½¿ç”¨ã€‚
 
 Still, there are limits. WebGL has stronger restrictions than Canvas2D for loading images which means you can't easily access images from around the web for your WebGL work. On top of that it's just faster to work with everything local.
 
-²»¹ı£¬ÕâÀïÓĞÏŞÖÆ¡£WebGL Ïà¶ÔÓÚ Canvas2D ÔÚ¼ÓÔØÍ¼Æ¬·½ÃæÓĞ¸üÇ¿µÄÔ¼Êø£¬ÕâÒâÎ¶×ÅÄãÔÚ WebGL ¿ª·¢ÖĞ²»ÄÜÇáÒ×µÄ·ÃÎÊÀ´×ÔÍøÂçµÄÍ¼Æ¬¡£×îÖØÒªµÄÊÇ£¬ËüÓë±¾µØ×ÊÔ´ºÏ×÷»á¸ü¿ì¡£
+ä¸è¿‡ï¼Œè¿™é‡Œæœ‰é™åˆ¶ã€‚WebGL ç›¸å¯¹äº Canvas2D åœ¨åŠ è½½å›¾ç‰‡æ–¹é¢æœ‰æ›´å¼ºçš„çº¦æŸï¼Œè¿™æ„å‘³ç€ä½ åœ¨ WebGL å¼€å‘ä¸­ä¸èƒ½è½»æ˜“çš„è®¿é—®æ¥è‡ªç½‘ç»œçš„å›¾ç‰‡ã€‚æœ€é‡è¦çš„æ˜¯ï¼Œå®ƒä¸æœ¬åœ°èµ„æºåˆä½œä¼šæ›´å¿«ã€‚
 
 Let's assume you want to run and edit the samples on this site. The first thing you should do is download the site. [You can download it here][4].
 
-ÈÃÎÒÃÇ¼ÙÉèÄãÏëÔÚÕâ¸öÍøÕ¾ÔËĞĞºÍ±à¼­Ê¾Àı´úÂë¡£Ê×ÏÈÄãÓ¦¸ÃÏÂÔØÕâ¸öÍøÕ¾¡£[Äã¿ÉÒÔÔÚÕâÀïÏÂÔØ][4]¡£
+è®©æˆ‘ä»¬å‡è®¾ä½ æƒ³åœ¨è¿™ä¸ªç½‘ç«™è¿è¡Œå’Œç¼–è¾‘ç¤ºä¾‹ä»£ç ã€‚é¦–å…ˆä½ åº”è¯¥ä¸‹è½½è¿™ä¸ªç½‘ç«™ã€‚[ä½ å¯ä»¥åœ¨è¿™é‡Œä¸‹è½½][4]ã€‚
 
 ![download][5]
 
 Unzip the files into some folder.
-ÔÚÎÄ¼ş¼ĞÖĞ½âÑ¹ÎÄ¼ş¡£
+åœ¨æ–‡ä»¶å¤¹ä¸­è§£å‹æ–‡ä»¶ã€‚
 
 ## Using a small simple easy Web Server
-## Ê¹ÓÃÒ»¸ö¼òµ¥µÄ Web ·şÎñÆ÷
+## ä½¿ç”¨ä¸€ä¸ªç®€å•çš„ Web æœåŠ¡å™¨
 
 Next up you should install a small web server. I know "web server" sounds scary but the truth is [web servers are actually extremely simple][6].
 
-ÏÂÒ»²½ÄãÓ¦¸Ã°²×°Ò»¸öĞ¡µÄ web ·şÎñÆ÷¡£ÎÒÖªµÀ¡°web ·şÎñÆ÷¡±ÌıÆğÀ´ºÜÏÅÈË£¬µ«ÊÂÊµÊÇ [web ·şÎñÆ÷Êµ¼ÊÉÏ·Ç³£¼òµ¥][6]¡£
+ä¸‹ä¸€æ­¥ä½ åº”è¯¥å®‰è£…ä¸€ä¸ªå°çš„ web æœåŠ¡å™¨ã€‚æˆ‘çŸ¥é“â€œweb æœåŠ¡å™¨â€å¬èµ·æ¥å¾ˆå“äººï¼Œä½†äº‹å®æ˜¯ [web æœåŠ¡å™¨å®é™…ä¸Šéå¸¸ç®€å•][6]ã€‚
 
 If you're on Chrome here's a simple solution. [Here's a small chrome extension that's a web server][7].
 
-Èç¹ûÄãÓÃ Chrome£¬ÓĞÒ»¸ö¼òµ¥µÄ½â¾ö·½·¨¡£[ÕâÀïÓĞÒ»¸öĞ¡µÄ Web ·şÎñÆ÷ chrome À©Õ¹][7]¡£
+å¦‚æœä½ ç”¨ Chromeï¼Œæœ‰ä¸€ä¸ªç®€å•çš„è§£å†³æ–¹æ³•ã€‚[è¿™é‡Œæœ‰ä¸€ä¸ªå°çš„ Web æœåŠ¡å™¨ chrome æ‰©å±•][7]ã€‚
 
 ![chrome extension][8]
 
 Just point it at the folder where you unzipped the files and click one of the web server URLs.
 
-Ö»Ğèµã»÷½âÑ¹ÁËµÄÎÄ¼ş¼ĞÖĞµÄÎÄ¼ş£¬µ¥»÷ÆäÖĞÒ»¸ö web ·şÎñÆ÷µÄ URL¡£
+åªéœ€ç‚¹å‡»è§£å‹äº†çš„æ–‡ä»¶å¤¹ä¸­çš„æ–‡ä»¶ï¼Œå•å‡»å…¶ä¸­ä¸€ä¸ª web æœåŠ¡å™¨çš„ URLã€‚
 
 If you're not on chrome or if you don't want to use the extension another way is to use [node.js][9]. Download it, install it, then open a command prompt / console / terminal window. If you're on Windows the installer will add a special "Node Command Prompt" so use that.
 
-Èç¹ûÄã²»ÊÇÊ¹ÓÃ chrome »òÕßÄã²»ÏëÊ¹ÓÃÀ©Õ¹£¬ÁíÒ»ÖÖ·½·¨ÊÇÊ¹ÓÃ [node.js][9]¡£ÏÂÔØ£¬°²×°£¬È»ºóÔÚÃüÁî´°¿Ú/¿ØÖÆÌ¨/ÖÕ¶Ë´°¿ÚÖĞ´ò¿ª ¡£Èç¹ûÄãÔÚ Windows ÖĞ°²×°£¬½«»áÌí¼ÓÒ»¸öÌØĞèµÄ ¡°Node Command Prompt¡± ÒÔ¹©Ê¹ÓÃ¡£
+å¦‚æœä½ ä¸æ˜¯ä½¿ç”¨ chrome æˆ–è€…ä½ ä¸æƒ³ä½¿ç”¨æ‰©å±•ï¼Œå¦ä¸€ç§æ–¹æ³•æ˜¯ä½¿ç”¨ [node.js][9]ã€‚ä¸‹è½½ï¼Œå®‰è£…ï¼Œç„¶ååœ¨å‘½ä»¤çª—å£/æ§åˆ¶å°/ç»ˆç«¯çª—å£ä¸­æ‰“å¼€ ã€‚å¦‚æœä½ åœ¨ Windows ä¸­å®‰è£…ï¼Œå°†ä¼šæ·»åŠ ä¸€ä¸ªç‰¹éœ€çš„ â€œNode Command Promptâ€ ä»¥ä¾›ä½¿ç”¨ã€‚
 
-Then install the http-server by typing¡£
+Then install the http-server by typingã€‚
 
-È»ºóÍ¨¹ıÃüÁîĞĞÊäÈë°²×° http-server¡£
+ç„¶åé€šè¿‡å‘½ä»¤è¡Œè¾“å…¥å®‰è£… http-serverã€‚
 
 ```
 npm -g install http-server
 ```
 
 If you're on OSX use
-Èç¹ûÄãÔÚ OSX ÖĞÊ¹ÓÃ
+å¦‚æœä½ åœ¨ OSX ä¸­ä½¿ç”¨
 
 ```
 sudo npm -g install http-server
@@ -60,7 +60,7 @@ sudo npm -g install http-server
 
 Once you've done that type
 
-°²×°Íê³ÉÖ®ºóÊäÈë
+å®‰è£…å®Œæˆä¹‹åè¾“å…¥
 
 ```
 http-server path/to/folder/where/you/unzipped/files
@@ -68,69 +68,69 @@ http-server path/to/folder/where/you/unzipped/files
 
 It should print something like
 
-ÃüÁî´°¿ÚÓ¦¸Ã´òÓ¡³öÀàËÆµÄ¶«Î÷
+å‘½ä»¤çª—å£åº”è¯¥æ‰“å°å‡ºç±»ä¼¼çš„ä¸œè¥¿
 
 ![http-server][10]
 
 Then in your browser go to http://localhost:8080.
 
-È»ºóÔÚÄãµÄä¯ÀÀÆ÷ÖĞÊäÈë http://localhost:8080¡£
+ç„¶ååœ¨ä½ çš„æµè§ˆå™¨ä¸­è¾“å…¥ http://localhost:8080ã€‚
 
 If you don't specify a path then http-server will server the current folder.
 
-Èç¹ûÄãÃ»ÓĞÖ¸¶¨Â·¾¶£¬http-server ½«»áÔÚÖ¸Ïòµ±Ç°µÄÎÄ¼ş¼Ğ¡£
+å¦‚æœä½ æ²¡æœ‰æŒ‡å®šè·¯å¾„ï¼Œhttp-server å°†ä¼šåœ¨æŒ‡å‘å½“å‰çš„æ–‡ä»¶å¤¹ã€‚
 
 ## Using your Browsers Developer Tools
-## Ê¹ÓÃÄãµÄä¯ÀÀÆ÷¿ª·¢Õß¹¤¾ß
+## ä½¿ç”¨ä½ çš„æµè§ˆå™¨å¼€å‘è€…å·¥å…·
 
 Most browser have extensive developer tools built in.
-´ó¶àÊıµÄä¯ÀÀÆ÷¶¼ÄÚÖÃÁË¿ª·¢Õß¹¤¾ß¡£
+å¤§å¤šæ•°çš„æµè§ˆå™¨éƒ½å†…ç½®äº†å¼€å‘è€…å·¥å…·ã€‚
 
 ![developer tools][11]
 
 [Docs for Chrome's are here][12], [Firefox's are here][13].
-Chrome µÄ²Î¿¼ÎÄµµÔÚÕâÀï£¬Firefox µÄÔÚÕâÀï¡£
+Chrome çš„å‚è€ƒæ–‡æ¡£åœ¨è¿™é‡Œï¼ŒFirefox çš„åœ¨è¿™é‡Œã€‚
 
 Learn how to use them. If nothing else always check the JavaScript console. If there is an issue it will often have an error message. Read the error message closely and you should get a clue where the issue is.
 
-Ñ§Ï°Èç¹ûÊ¹ÓÃËüÃÇ¡£Èç¹ûÃ»ÓĞÆäËüµÄÊÂÒ»Ö±¼ì²é JavaScript ¿ØÖÆÌ¨¡£Èç¹ûÓĞÎÊÌâ£¬Ëü»áÏÔÊ¾´íÎóĞÅÏ¢¡£×ĞÏ¸ÔÄ¶Á´íÎóĞÅÏ¢£¬Äã»áµÃµ½ÎÊÌâµÄÏßË÷¡£
+å­¦ä¹ å¦‚æœä½¿ç”¨å®ƒä»¬ã€‚å¦‚æœæ²¡æœ‰å…¶å®ƒçš„äº‹ä¸€ç›´æ£€æŸ¥ JavaScript æ§åˆ¶å°ã€‚å¦‚æœæœ‰é—®é¢˜ï¼Œå®ƒä¼šæ˜¾ç¤ºé”™è¯¯ä¿¡æ¯ã€‚ä»”ç»†é˜…è¯»é”™è¯¯ä¿¡æ¯ï¼Œä½ ä¼šå¾—åˆ°é—®é¢˜çš„çº¿ç´¢ã€‚
 
 ![chrome console][14]
 
 ## WebGL Helpers
-## WebGL ÖúÊÖ
+## WebGL åŠ©æ‰‹
 
 There are various WebGL Inspectors / Helpers. [Here's one for Chrome][15].
 
-ÕâÀïÓĞ¸÷ÖÖ¸÷ÑùµÄ WebGL ¼ìÑéÔ±/ÖúÊÖ¡£[Õâ¸öÊÇ Chrome µÄ][15]¡£
+è¿™é‡Œæœ‰å„ç§å„æ ·çš„ WebGL æ£€éªŒå‘˜/åŠ©æ‰‹ã€‚[è¿™ä¸ªæ˜¯ Chrome çš„][15]ã€‚
 
 ![WebGL Inspectors / Helper][16]
 
 They may or may not be helpful. Most of them are designed for animated samples and will capture a frame and let you see all the WebGL calls that made that frame. That's great if you already have something working or if you had something working and it broke. But it's not so great if your issue is during initialization which they don't catch or if you're not using animation, as in drawing something every frame. Still they can be very useful. I'll often click on a draw call, and check the uniforms. If I see a bunch of NaN (NaN = Not a Number) then I can usually track down the code that set that uniform and find the bug.
 
-ËûÃÇ¿ÉÄÜ»áÒ²¿ÉÄÜ²»»áÓĞ°ïÖú¡£ËüÃÇÖĞµÄ´ó¶àÊıÊÇ×¨Îª¶¯»­Ê¾ÀıµÄ£¬ËüÃÇ²¶»ñ²¢Õ¹Ê¾Ò»¸öµ÷ÓÃ WebGL µÄ¿ò¡£Èç¹ûÄãÒÑ¾­ÓĞÁËÒ»Ğ©Ê¾ÀıÆğĞ§ÁË»òÕßÓĞÒ»Ğ©Ê¾ÀıÆğĞ§µ«ÓÖÊ§°ÜÁË£¬ÕâºÜºÃ¡£Èç¹ûÄãµÄÎÊÌâÊÇÔÚ³õÊ¼»¯¹ı³ÌÖĞÖúÊÖ²»ÄÜ²¶»ñ¿ò¼Ü»òÕßÊÇÄãÔÚ»æÖÆ¿ò¼ÜÊ±Ã»ÓĞÊ¹ÓÃ¶¯»­£¬Õâ¾Í²»ÊÇºÜºÃÁË¡£µ«ËüÃÇÈÎÈ»¿ÉÒÔ·Ç³£ÓĞÓÃµÄ¡£ÎÒ¾­³£»áµã»÷Ò»¸öµ÷ÓÃ£¬ÒÔ¼ì²é uniforms¡£Èç¹ûÎÒ¿´µ½Ò»¶Ñ NaN£¨NaN = Not a Number£©ÎÒ¾Í¿ÉÒÔ¸ú×Ù´úÂë£¬ÉèÖÃ uniform ²¢ÕÒ³ö´íÎó¡£
+ä»–ä»¬å¯èƒ½ä¼šä¹Ÿå¯èƒ½ä¸ä¼šæœ‰å¸®åŠ©ã€‚å®ƒä»¬ä¸­çš„å¤§å¤šæ•°æ˜¯ä¸“ä¸ºåŠ¨ç”»ç¤ºä¾‹çš„ï¼Œå®ƒä»¬æ•è·å¹¶å±•ç¤ºä¸€ä¸ªè°ƒç”¨ WebGL çš„æ¡†ã€‚å¦‚æœä½ å·²ç»æœ‰äº†ä¸€äº›ç¤ºä¾‹èµ·æ•ˆäº†æˆ–è€…æœ‰ä¸€äº›ç¤ºä¾‹èµ·æ•ˆä½†åˆå¤±è´¥äº†ï¼Œè¿™å¾ˆå¥½ã€‚å¦‚æœä½ çš„é—®é¢˜æ˜¯åœ¨åˆå§‹åŒ–è¿‡ç¨‹ä¸­åŠ©æ‰‹ä¸èƒ½æ•è·æ¡†æ¶æˆ–è€…æ˜¯ä½ åœ¨ç»˜åˆ¶æ¡†æ¶æ—¶æ²¡æœ‰ä½¿ç”¨åŠ¨ç”»ï¼Œè¿™å°±ä¸æ˜¯å¾ˆå¥½äº†ã€‚ä½†å®ƒä»¬ä»»ç„¶å¯ä»¥éå¸¸æœ‰ç”¨çš„ã€‚æˆ‘ç»å¸¸ä¼šç‚¹å‡»ä¸€ä¸ªè°ƒç”¨ï¼Œä»¥æ£€æŸ¥ uniformsã€‚å¦‚æœæˆ‘çœ‹åˆ°ä¸€å † NaNï¼ˆNaN = Not a Numberï¼‰æˆ‘å°±å¯ä»¥è·Ÿè¸ªä»£ç ï¼Œè®¾ç½® uniform å¹¶æ‰¾å‡ºé”™è¯¯ã€‚
 
 ## Inspect the Code
-## ¼ì²é´úÂë
+## æ£€æŸ¥ä»£ç 
 
 Also always remember you can inspect the code. You can usually just pick view source
 
-ÓÀÔ¶¼Ç×¡Äã¿ÉÒÔ¼ì²é´úÂë¡£Äã¿ÉÒÔÑ¡ÔñÖ»²é¿´Ô´Âë¡£
+æ°¸è¿œè®°ä½ä½ å¯ä»¥æ£€æŸ¥ä»£ç ã€‚ä½ å¯ä»¥é€‰æ‹©åªæŸ¥çœ‹æºç ã€‚
 
 ![helper][17]
 
 Even if you can't right click a page or if the source is in a separate file you can always view the source in the devtools
 
-¼´Ê¹Äã²»ÄÜÓÒ»÷Ò³Ãæ»òÕßÔ´ÂëÊÇÔÚÒ»¸öµ¥¶ÀµÄÎÄ¼şÖĞ£¬ÄãÈÔÈ»¿ÉÒÔÔÚ¿ª·¢Õß¹¤¾ßÖĞ²é¿´Ô´Âë¡£
+å³ä½¿ä½ ä¸èƒ½å³å‡»é¡µé¢æˆ–è€…æºç æ˜¯åœ¨ä¸€ä¸ªå•ç‹¬çš„æ–‡ä»¶ä¸­ï¼Œä½ ä»ç„¶å¯ä»¥åœ¨å¼€å‘è€…å·¥å…·ä¸­æŸ¥çœ‹æºç ã€‚
 
 ![devtools][18]
 
 ## Get Started
-## ¿ªÊ¼
+## å¼€å§‹
 
 Hopefully that helps you get started. [Now back to the lessons][19].
 
-Ï£ÍûÕâÓĞÖúÓÚÄã¿ªÊ¼¡£[ÏÖÔÚ»Øµ½½Ì³Ì][19]¡£
+å¸Œæœ›è¿™æœ‰åŠ©äºä½ å¼€å§‹ã€‚[ç°åœ¨å›åˆ°æ•™ç¨‹][19]ã€‚
 
 [1]: https://jsfiddle.net/
 [2]: http://jsbin.com/
