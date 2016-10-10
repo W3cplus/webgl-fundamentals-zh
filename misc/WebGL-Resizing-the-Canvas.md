@@ -1,2 +1,1 @@
-# WebGL Resizing the Canvas
-
+## WebGL Resizing the Canvas.
