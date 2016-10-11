@@ -9,7 +9,9 @@
 | culling | 背面剔除 | 名词译为“背面剔除”，动宾短语译为“剔除背面”。 |
 | depth buffer | 深度缓冲区 |
 | fragment shader | 片元着色器 |
+| orthographic | 正交 |
 | projection | 映射 |
+| perspective | 透视 |
 | rotation | 旋转 |
 | translation | 平移 |
 | scale | 缩放 |
