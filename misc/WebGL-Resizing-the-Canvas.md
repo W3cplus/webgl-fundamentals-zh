@@ -1,5 +1,5 @@
 ## WebGL Resizing the Canvas.
-## WebGL 画布大小
+## WebGL 调整 Canvas 尺寸
   
 Here's what you need to know to change the size of the canvas.
 这里你需要知道改变画布的大小的方法。
