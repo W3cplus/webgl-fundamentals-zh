@@ -152,7 +152,7 @@ The other problem is the browser has no idea why you're using `setInterval` or `
 
 `requestAnimationFrame` solves both of these issues. It calls you at just the right time to sync your animation with the screen and it also only calls you if your tab is visible. 
 
-`requestAnimationFrame`解决了这两个问题。你调用它时，动画会你的显示屏同步，并且只会在标签可见的情况下调用。
+`requestAnimationFrame`解决了这两个问题。调用它时，动画会与你的显示屏同步，并且只会在标签可见的情况下调用。
 
 [1]: http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html
 [2]: http://webglfundamentals.org/webgl/lessons/webgl-3d-camera.html
