@@ -767,7 +767,148 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="webgl-boilerplate">WebGL Boilerplate</h1>
+                                <h1 id="webgl-boilerplate">WebGL Boilerplate</h1><h1 id="webgl-&#x2BE;&#xFFFD;&#xFFFD;">WebGL &#x2BE;&#xFFFD;&#xFFFD;</h1><p>This is a continuation from WebGL Fundamentals. WebGL sometimes appears complicated to learn because most lessons go over everything all at once. I&apos;ll try to avoid that where possible and break it down into smaller pieces.</p><p>&#xFFFD;&#xFFFD;&#x1AA;&#xFFFD;&#xFFFD; <a href="../fundamentals/webgl-fundamentals.html" target="_blank">WebGL Fundamentals</a> &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B1;&#xFFFD;&#xFFFD; WebGL &#x467;&#x3F0;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1BA;&#xFFFD;&#xFFFD;&#x738;&#xFFFD;&#xFFFD;&#x4E3;&#xFFFD;&#xFFFD;&#xFFFD;&#x3AA;&#xFFFD;&#xF2FF7;&#x5B5;&#x13D;&#x333;&#xFFFD;&#xFFFD;&#xFFFD;&#x4AA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5AA;&#x2B6;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#x9863;&#xFFFD;&#x4BB;&#x1FA1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x6BF;&#xFFFD;&#xFFFD;&#x735;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xA3;&#xFFFD;&#xFFFD;&#x5BD;&#xFFFD;&#x3AA;&#x421;&#xFFFD;&#xFFFD;&#x1AC;&#xFFFD;&#x3A1;&#xFFFD;</p><p>One of things that makes WebGL seem complicated is that you have these 2 tiny functions, a vertex shader and a fragment shader. Those two functions usually run on your GPU which is where all the speed comes from. That&apos;s also why they are written in a custom language, a language that matches what a GPU can do. Those 2 functions need to be compiled and linked. That process is, 99% of the time, the same in every WebGL program.</p><p>&#xFFFD;&#xFFFD; WebGL &#xFFFD;&#xFFFD;&#xFFFD;&#x1B8;&#xFFFD;&#xFFFD;&#x4F5;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x421;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;vertex shader&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1AC;&#x52A;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;fragment shader&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x368;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; GPU &#xFFFD;&#x423;&#xFFFD;GPU &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x676;&#x235;&#xFFFD;&#xFFFD;&#xFFFD;&#x534;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4B2;&#xFFFD;&#xFFFD;&#x3AA;&#x2B2;&#xF4;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD; GPU &#xFFFD;&#x739;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x435;&#xFFFD;&#xFFFD;&#x536;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x531;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x52D;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4AA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4E1;&#xFFFD;
+&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#x323;&#xFFFD;99% &#xFFFD;&#xFFFD;&#x2B1;&#xFFFD;&#x48EC;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x36C;&#x4BB;&#xFFFD;&#xFFFD; WebGL &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x43D;&#xFFFD;&#xFFFD;&#x435;&#x121;&#xFFFD;</p><p>Here&apos;s the boilerplate code for compiling a shader.</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#x1F1;&#xF2D;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2BE;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xB863;</p><pre><code>/**
+ * Creates and compiles a shader.
+ *&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;
+ *
+ * @param {!WebGLRenderingContext} gl The WebGL Context.
+ * gl &#x3AA;WebGL &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x121;&#xFFFD;
+ * @param {string} shaderSource The GLSL source code for the shader.
+ * shaderSource &#x3AA;GLSL &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#x534;&#xFFFD;&#xB863;
+ * @param {number} shaderType The type of shader, VERTEX_SHADER or
+ *     FRAGMENT_SHADER.
+ * shaderType &#x3AA;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x363;&#xFFFD;VERTEX_SHADER &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; FRAGMENT_SHADER&#xFFFD;&#xFFFD;
+ * @return {!WebGLShader} The shader.
+ * &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;
+ */
+function compileShader(gl, shaderSource, shaderType) {
+  // Create the shader object
+  // &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;
+  var shader = gl.createShader(shaderType);
+
+  // Set the shader source code.
+  // &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#x534;&#xFFFD;&#xFFFD;
+  gl.shaderSource(shader, shaderSource);
+
+  // Compile the shader
+  // &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;
+  gl.compileShader(shader);
+
+  // Check if it compiled
+  // &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#xFFFD;&#x1F7;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x279;&#xFFFD;
+  var success = gl.getShaderParameter(shader, gl.COMPILE_STATUS);
+  if (!success) {
+    // Something went wrong during compilation; get the error
+    // &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x333;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5F3;&#xFFFD;&#xFFFD;&#xCCE3;
+    throw &quot;could not compile shader:&quot; + gl.getShaderInfoLog(shader);
+  }
+
+  return shader;
+}</code></pre>
+<p>And the boilerplate code for linking 2 shaders into a program.</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2BE;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1FD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4F5;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><pre><code>/**
+ * Creates a program from 2 shaders.
+ * &#x3AA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;
+ *
+ * @param {!WebGLRenderingContext) gl The WebGL context.
+ * gl &#x3AA; WebGL &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x121;&#xFFFD;
+ * @param {!WebGLShader} vertexShader A vertex shader.
+ * vertexShader &#x3AA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;
+ * @param {!WebGLShader} fragmentShader A fragment shader.
+  * fragmentShader &#x3AA;&#x1AC;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;
+ * @return {!WebGLProgram} A program.
+ * &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;
+ */
+function createProgram(gl, vertexShader, fragmentShader) {
+  // create a program.
+  // &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;
+  var program = gl.createProgram();
+
+  // attach the shaders.
+  // &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x26B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;
+  gl.attachShader(program, vertexShader);
+  gl.attachShader(program, fragmentShader);
+
+  // link the program.
+  // &#xFFFD;&#xFFFD;&#xFFFD;&#x4F3;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;
+  gl.linkProgram(program);
+
+  // Check if it linked.
+  // &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1F7;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4F3;&#x279;&#xFFFD;&#xFFFD;&#xFFFD;
+  var success = gl.getProgramParameter(program, gl.LINK_STATUS);
+  if (!success) {
+      // something went wrong with the link
+      // &#xFFFD;&#xFFFD;&#xFFFD;&#x4F3;&#xFFFD;&#xFFFD;&#xFFFD;
+      throw (&quot;program filed to link:&quot; + gl.getProgramInfoLog (program));
+  }
+
+  return program;
+};</code></pre>
+<p>Of course how you decide to handle errors might be different. Throwing exceptions might not be the best way to handle things. Still, those few lines of code are pretty much the same in nearly every WebGL program.</p><p>&#xFFFD;&#xFFFD;&#x23B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x3B4;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x137;&#xFFFD;&#x2BD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x36C;&#xFFFD;&#xFFFD;&#xFFFD;&#x5F3;&#xFFFD;&#xFFFD;&#xCCE3;&#xFFFD;&#xFFFD;&#xFFFD;&#x732;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xF5;&#x134;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2BD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2E3;&#xFFFD;&#xFFFD;&#x2F38;&#xFFFD;&#x434;&#xFFFD;&#xFFFD;&#xBF38;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFF;&#x4BB;&#xFFFD;&#xFFFD; WebGL &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x436;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x36C;&#xFFFD;&#x121;&#xFFFD;</p><p>I like to store my shaders in non javascript <script> tags. It makes them easy to edit so I use code like this.</p><p>��ϲ�����ҵ���ɫ�������ڷ� javascript ��ǩ�&Scy;���ʹ���������ױ༭������������ʹ�&aacute;�</p><pre><code>/**
+ * Creates a shader from the content of a script tag.
+ * ����һ������������ script ��ǩ����ɫ����
+ *
+ * @param {!WebGLRenderingContext} gl The WebGL Context.
+ * gl Ϊ WebGL �����&gdot;�
+ * @param {string} scriptId The id of the script tag.
+ * scriptId Ϊ script ��ǩ��id��
+ * @param {string} opt_shaderType. The type of shader to create.
+ * opt_shaderType Ϊ��Ҫ��������ɫ�������͡�
+ *     If not passed in will use the type attribute from the
+ *     script tag.
+ * ����&ucirc;�&dcy;�����һ����������ʹ�� script ��ǩ�&iecy;� type ����ֵ��
+ * @return {!WebGLShader} A shader.
+ * ����һ����ɫ����
+ */
+function createShaderFromScript(gl, scriptId, opt_shaderType) {
+  // look up the script tag by id.
+  // ���� script ��ǩ��id��
+  var shaderScript = document.getElementById(scriptId);
+  if (!shaderScript) {
+    throw(&quot;*** Error: unknown script element&quot; + scriptId);
+  }
+
+  // extract the contents of the script tag.
+  // ��ȡ script ��ǩ�&iecy;����ݡ�
+  var shaderSource = shaderScript.text;
+
+  // If we didn&apos;t pass in a type, use the &apos;type&apos; from
+  // the script tag.
+  // ����&ucirc;�&dcy;������Ͳ�������ʹ�� script ��ǩ�&gdot;�type����ֵ��
+  if (!opt_shaderType) {
+    if (shaderScript.type == &quot;x-shader/x-vertex&quot;) {
+      opt_shaderType = gl.VERTEX_SHADER;
+    } else if (shaderScript.type == &quot;x-shader/x-fragment&quot;) {
+      opt_shaderType = gl.FRAGMENT_SHADER;
+    } else if (!opt_shaderType) {
+      throw(&quot;*** Error: shader type not set&quot;);
+    }
+  }
+
+  return compileShader(gl, shaderSource, opt_shaderType);
+};</code></pre>
+<p>Now to compile a shader I can just do.</p><p>�����ҿ��Ա�����ɫ���ˡ�</p><pre><code>var shader = compileShaderFromScript(gl, &quot;someScriptTagId&quot;);</code></pre>
+<p>I&apos;ll usually go one step further and make a function to compile two shaders from script tags, attach them to a program and link them.</p><p>��ͨ��������һ��������һ�������༭�������� script ��ǩ����ɫ�������������ӵ�һ�����򣬲��������ǡ�</p><pre><code>/**
+ * Creates a program from 2 script tags.
+ * ������ script ��ǩ�&dcy;���һ����ѫ��
+ *
+ * @param {!WebGLRenderingContext} gl The WebGL Context.
+ * gl Ϊ WebGL �������&gdot;�
+ * @param {string} vertexShaderId The id of the vertex shader script tag.
+ * vertexShaderId Ϊ ���嶥����ɫ���� script ��ǩ�� id��
+ * @param {string} fragmentShaderId The id of the fragment shader script tag.
+  * fragmentShaderId Ϊ ����ƬԪ��ɫ���� script ��ǩ�� id��
+ * @return {!WebGLProgram} A program
+ * ����һ��������
+ */
+function createProgramFromScripts(
+    gl, vertexShaderId, fragmentShaderId) {
+  var vertexShader = createShaderFromScriptTag(gl, vertexShaderId);
+  var fragmentShader = createShaderFromScriptTag(gl, fragmentShaderId);
+  return createProgram(gl, vertexShader, fragmentShader);
+}</code></pre>
+<p>That&apos;s most of my minimum set of WebGL boilerplate code. You can find that code here. If you want something slightly more organized check out TWGL.js.</p><p>���������� WebGL ��������ʾ�����롣<a href="https://github.com/greggman/webgl-fundamentals/blob/master/webgl/resources/webgl-utils.js" target="_blank">�������������ҵ���&SHCHcy;����</a>��
+��������Ҫ�������������鿴 <a href="http://twgljs.org/" target="_blank">TWGL.js</a>��</p><p>The rest of what makes WebGL look complicated is setting up all the inputs to your shaders. See how it works.</p><p>�� WebGL ���������ӵ����ಿ������ɫ���������������&aacute;��뿴 <a href="/fundamentals/WebGL-How-It-Works.html" target="_blank">how it works</a>��</p><p>I&apos;d also suggest you read up on less code more fun and check out TWGL.</p><p>��Ҳ��������ϸ�&ocy;� [less code more fun][4] ���Ҳ鿴 <a href="http://twgljs.org/" target="_blank">TWGL</a>��</p></script></p>
                                 
                                 </section>
                             
@@ -810,7 +951,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"WebGL Boilerplate","level":"1.9.2","depth":2,"next":{"title":"WebGL Resizing the Canvas","level":"1.9.3","depth":2,"path":"misc/WebGL-Resizing-the-Canvas.md","ref":"misc/WebGL-Resizing-the-Canvas.md","articles":[]},"previous":{"title":"WebGL Setup And Installation","level":"1.9.1","depth":2,"path":"misc/WebGL-Setup-And-Installation.md","ref":"misc/WebGL-Setup-And-Installation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"misc/WebGL-Boilerplate.md","mtime":"2016-09-18T10:56:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-30T02:47:48.865Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"WebGL Boilerplate","level":"1.9.2","depth":2,"next":{"title":"WebGL Resizing the Canvas","level":"1.9.3","depth":2,"path":"misc/WebGL-Resizing-the-Canvas.md","ref":"misc/WebGL-Resizing-the-Canvas.md","articles":[]},"previous":{"title":"WebGL Setup And Installation","level":"1.9.1","depth":2,"path":"misc/WebGL-Setup-And-Installation.md","ref":"misc/WebGL-Setup-And-Installation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"misc/WebGL-Boilerplate.md","mtime":"2016-10-08T09:19:23.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-17T05:32:02.447Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
