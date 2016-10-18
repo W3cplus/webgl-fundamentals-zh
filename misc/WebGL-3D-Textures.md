@@ -1,4 +1,5 @@
 ## WebGL 3D - Textures
+
 ## WebGL 3D - 纹理
 
 This post is a continuation of a series of posts about WebGL. The first [started with fundamentals][1] and the previous was about [animation][2].
@@ -532,7 +533,7 @@ Next up [lets start simplifying with less code more fun][21].
 Texture coordinates are often shortened to texture coords, texcoords or UVs (pronounced Ew-Vees). I have no idea where the term UVs came from except that vertex positions often use `x, y, z, w` so for texture coordinates they decided to use `s, t, u, v` to try to make it clear which of the 2 types you're refering to. Given that though you'd think they'd be called Es-Tees and in fact if you look at the texture wrap settings they are called `TEXTURE_WRAP_S` and `TEXTURE_WRAP_T` but for some reason as long as I've been working in graphics people have called them Ew-Vees. 
 So now you know if someone says UVs they're talking about texture coordinates.
 
-Texture coordinates 往往会缩写为texture coords，texcoords 或者 UVs (pronounced Ew-Vees)。我不知道 UVs 这一术语从何而来，但是顶点位置通常使用 x，y，z，w 表示，而纹理坐标使用s，t，u，v 表示，试图区分你是指哪个坐标。尽管你觉得他们应该被称为 Es-Tees，但实际上，当你查看纹理的 wrap 设置，会发现它们被称为 `TEXTURE_WRAP_S`和`TEXTURE_WRAP_T`，而由于某种原因，在制图学上人们称它们为 Ew-Vees。所以你现在清楚了，如果有人说 UVs，他们是在说纹理坐标。
+Texture coordinates 往往会缩写为texture coords，texcoords 或者 UVs (pronounced Ew-Vees)。我不知道 UVs 这一术语从何而来，但是顶点位置通常使用 x，y，z，w 表示，而纹理坐标使用s，t，u，v 表示，试图区分你是指哪个坐标。尽管你觉得他们应该被称为 Es-Tees，但实际上，当你查看纹理的 wrap 设置，会发现它们被称为 `TEXTURE_WRAP_S`和`TEXTURE_WRAP_T`，而由于某种原因，在制图学上人们称它们为 Ew-Vees。所以你现在清楚了，如果有人说 UVs，他们指的是纹理坐标。
 
 [1]: http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html
 [2]: http://webglfundamentals.org/webgl/lessons/webgl-animation.html
