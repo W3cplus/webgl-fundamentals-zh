@@ -1,0 +1,903 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>WebGL - Animation · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="WebGL-3D-Textures.html" />
+    
+    
+    <link rel="prev" href="WebGL-Resizing-the-Canvas.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../fundamentals/">
+            
+                <a href="../fundamentals/">
+            
+                    
+                    Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../fundamentals/WebGL-Fundamentals.html">
+            
+                <a href="../fundamentals/WebGL-Fundamentals.html">
+            
+                    
+                    WebGL Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../fundamentals/WebGL-How-It-Works.html">
+            
+                <a href="../fundamentals/WebGL-How-It-Works.html">
+            
+                    
+                    WebGL How It Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../fundamentals/WebGL-Shaders-and-GLSL.html">
+            
+                <a href="../fundamentals/WebGL-Shaders-and-GLSL.html">
+            
+                    
+                    WebGL Shaders and GLSL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../image-processing/">
+            
+                <a href="../image-processing/">
+            
+                    
+                    Image Processing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../image-processing/WebGL-Image-Processing.html">
+            
+                <a href="../image-processing/WebGL-Image-Processing.html">
+            
+                    
+                    WebGL Image Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../image-processing/WebGL-Image-Processing-Continued.html">
+            
+                <a href="../image-processing/WebGL-Image-Processing-Continued.html">
+            
+                    
+                    WebGL Image Processing Continued
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../2D-translation/">
+            
+                <a href="../2D-translation/">
+            
+                    
+                    2D translation, rotation, scale, matrix math
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../2D-translation/WebGL-2D-Translation.html">
+            
+                <a href="../2D-translation/WebGL-2D-Translation.html">
+            
+                    
+                    WebGL 2D Translation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../2D-translation/WebGL-2D-Rotation.html">
+            
+                <a href="../2D-translation/WebGL-2D-Rotation.html">
+            
+                    
+                    WebGL 2D Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../2D-translation/WebGL-2D-Scale.html">
+            
+                <a href="../2D-translation/WebGL-2D-Scale.html">
+            
+                    
+                    WebGL 2D Scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../2D-translation/WebGL-2D-Matrices.html">
+            
+                <a href="../2D-translation/WebGL-2D-Matrices.html">
+            
+                    
+                    WebGL 2D Matrices
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../3D/">
+            
+                <a href="../3D/">
+            
+                    
+                    3D
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../3D/WebGL-Orthographic-3D.html">
+            
+                <a href="../3D/WebGL-Orthographic-3D.html">
+            
+                    
+                    WebGL - Orthographic 3D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../3D/WebGL-3D-Perspective.html">
+            
+                <a href="../3D/WebGL-3D-Perspective.html">
+            
+                    
+                    WebGL 3D Perspective
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../3D/WebGL-3D-Cameras.html">
+            
+                <a href="../3D/WebGL-3D-Cameras.html">
+            
+                    
+                    WebGL 3D - Cameras
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../lighting/">
+            
+                <a href="../lighting/">
+            
+                    
+                    Lighting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../lighting/WebGL-3D-Directional-Lighting.html">
+            
+                <a href="../lighting/WebGL-3D-Directional-Lighting.html">
+            
+                    
+                    WebGL 3D - Directional Lighting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../lighting/WebGL-3D-Point-Lighting.html">
+            
+                <a href="../lighting/WebGL-3D-Point-Lighting.html">
+            
+                    
+                    WebGL 3D - Point Lighting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Structure-and-Organization/">
+            
+                <a href="../Structure-and-Organization/">
+            
+                    
+                    Structure and Organization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Structure-and-Organization/WebGL-Less-Code-More-Fun.html">
+            
+                <a href="../Structure-and-Organization/WebGL-Less-Code-More-Fun.html">
+            
+                    
+                    WebGL - Less Code, More Fun
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Structure-and-Organization/WebGL-Drawing-Multiple-Things.html">
+            
+                <a href="../Structure-and-Organization/WebGL-Drawing-Multiple-Things.html">
+            
+                    
+                    WebGL - Drawing Multiple Things
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Structure-and-Organization/WebGL-Scene-Graphs.html">
+            
+                <a href="../Structure-and-Organization/WebGL-Scene-Graphs.html">
+            
+                    
+                    WebGL - Scene Graphs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../techniques/">
+            
+                <a href="../techniques/">
+            
+                    
+                    Techniques
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../techniques/WebGL-2D-DrawImage.html">
+            
+                <a href="../techniques/WebGL-2D-DrawImage.html">
+            
+                    
+                    WebGL 2D - DrawImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../techniques/WebGL-2D-Matrix-Stack.html">
+            
+                <a href="../techniques/WebGL-2D-Matrix-Stack.html">
+            
+                    
+                    WebGL 2D - Matrix Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../techniques/WebGL-Text-HTML.html">
+            
+                <a href="../techniques/WebGL-Text-HTML.html">
+            
+                    
+                    WebGL Text - HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../techniques/WebGL-Text-Canvas-2D.html">
+            
+                <a href="../techniques/WebGL-Text-Canvas-2D.html">
+            
+                    
+                    WebGL Text - Canvas 2D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../techniques/WebGL-Text-Using-a-Texture.html">
+            
+                <a href="../techniques/WebGL-Text-Using-a-Texture.html">
+            
+                    
+                    WebGL Text - Using a Texture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../techniques/WebGL-Text-Using-a-Glyph-Texture.html">
+            
+                <a href="../techniques/WebGL-Text-Using-a-Glyph-Texture.html">
+            
+                    
+                    WebGL Text - Using a Glyph Texture
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Misc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="WebGL-Setup-And-Installation.html">
+            
+                <a href="WebGL-Setup-And-Installation.html">
+            
+                    
+                    WebGL Setup And Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="WebGL-Boilerplate.html">
+            
+                <a href="WebGL-Boilerplate.html">
+            
+                    
+                    WebGL Boilerplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="WebGL-Resizing-the-Canvas.html">
+            
+                <a href="WebGL-Resizing-the-Canvas.html">
+            
+                    
+                    WebGL Resizing the Canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.4" data-path="WebGL-Animation.html">
+            
+                <a href="WebGL-Animation.html">
+            
+                    
+                    WebGL - Animation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="WebGL-3D-Textures.html">
+            
+                <a href="WebGL-3D-Textures.html">
+            
+                    
+                    WebGL 3D - Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="WebGL-Using-2-or-More-Textures.html">
+            
+                <a href="WebGL-Using-2-or-More-Textures.html">
+            
+                    
+                    WebGL Using 2 or More Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="WebGL-and-Alpha.html">
+            
+                <a href="WebGL-and-Alpha.html">
+            
+                    
+                    WebGL and Alpha
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="WebGL-2D-vs-3D-libraries.html">
+            
+                <a href="WebGL-2D-vs-3D-libraries.html">
+            
+                    
+                    WebGL - 2D vs 3D libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="WebGL-Anti-Patterns.html">
+            
+                <a href="WebGL-Anti-Patterns.html">
+            
+                    
+                    WebGL - Anti-Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Helper-API-Docs/">
+            
+                <a href="../Helper-API-Docs/">
+            
+                    
+                    Helper API Docs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../TWGL-A-tiny-WebGL-helper-library/">
+            
+                <a href="../TWGL-A-tiny-WebGL-helper-library/">
+            
+                    
+                    TWGL, A tiny WebGL helper library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../术语/">
+            
+                <a href="../术语/">
+            
+                    
+                    术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <a target="_blank" href="https://github.com/greggman/webgl-fundamentals">
+            
+                    
+                    github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >WebGL - Animation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="webgl---animation">WebGL - Animation</h2><h2 id="webgl---&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;">WebGL - &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</h2><p>This post is a continuation of a series of posts about WebGL. The first <a href="http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html" target="_blank">started with fundamentals</a>. and the previous was about <a href="http://webglfundamentals.org/webgl/lessons/webgl-3d-camera.html" target="_blank">3D cameras</a>. If you haven&apos;t read those please view them first.</p><p>&#xFFFD;&#xFFFD;&#x1AA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; WebGL &#x3F5;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xB5;&#xFFFD;&#xFFFD;&#xFFFD;&#x1AA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFB;&#xFFFD;&#xFFFD;&#xFFFD;&#x136;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#x1AA;<a href="http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html" target="_blank">&#xFFFD;&#x4FB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2BC;</a>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1F0;&#xFFFD;&#xFFFD;<a href="http://webglfundamentals.org/webgl/lessons/webgl-3d-camera.html" target="_blank">3D &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</a>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x136;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1E1;&#xFFFD;</p><p>How do we animate something in WebGL?</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; WebGL &#xFFFD;&#xFFFD;&#x2B9;&#xFFFD;&#xF6;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><p>Actually this isn&apos;t specific to WebGL but generally if you want to animate something in JavaScript you need to change something over time and draw again.</p><p>&#xFFFD;&#xFFFD;&#x2B5;&#xFFFD;&#xFFFD; WebGL &#xFFFD;&#xFFFD;&#xFB;&#xFFFD;&#xFFFD;&#x2B2;&#xF4;&#xFFFD;&#x631;&#xFFFD;&#xFFFD;&#x123;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x3E3;&#xFFFD;&#xFFFD;&#x368;&#xFFFD;&#xFFFD; JavaScript &#x2B9;&#xFFFD;&#xF6;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4AA;&#xFFFD;&#xFFFD;&#xFFFD;&#x3F5;&#x138;&#x131;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x63B;&#x6863;</p><p>We can take one of our previous samples and animate it as follows.</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#x1FF;&#xFFFD;&#xFFFD;&#x532;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1F0;&#xFFFD;&#xFFFD;&#x2B5;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B9;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2F6;&#xFFFD;&#xFFFD;&#xFFFD;</p><pre><code>    var fieldOfViewRadians = degToRad(60);
+    var rotationSpeed = 1.2;
+
+    requestAnimationFrame(drawScene);
+
+    // Draw the scene.
+    // &#xFFFD;&#xFFFD;&#xFFFD;&#x1B3;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;
+    function drawScene() {
+      // Every frame increase the rotation a little.
+      // &#xFF;&#x4BB;&#x5A1;&#xFFFD;&#xFFFD;&#x5EA;&#x4BB;&#xFFFD;&#x3863;
+      rotation[1] += rotationSpeed / 60.0;
+
+      ...
+      // Call drawScene again next frame
+      // &#xFFFD;&#xFFFD;&#x4BB;&#x5A1;&#xFFFD;&#x674;&#x3B5;&#xFFFD;&#xFFFD;&#xFFFD; drawScene
+      requestAnimationFrame(drawScene);
+    }</code></pre>
+<p>And here it is</p><p>&#x427;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><iframe class="webgl_example" style=" " src="/webgl/resources/editor.html?url=/webgl/lessons/../webgl-animation-not-frame-rate-independent.html"></iframe>
+
+
+
+<p><a href="http://webglfundamentals.org/webgl/webgl-animation-not-frame-rate-independent.html" target="_blank">click here to open in a separate window</a></p><p><a href="http://webglfundamentals.org/webgl/webgl-animation-not-frame-rate-independent.html" target="_blank">&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xB4;&#xFFFD;&#xFFFD;&#x6B4;&#xFFFD;&#xFFFD;&#xFFFD;</a></p><p>There&apos;s a subtle problem though. The code above has a <code>rotationSpeed / 60.0</code>. We divided by 60.0 because we assumed the browser will respond to requestAnimationFrame 60 times a second which is pretty common.</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#x421;&#xFFFD;&#xFFFD;&#xFFFD;&#x2863;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x134;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD; <code>rotationSpeed / 60.0</code>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x3AA; 60.0 &#xFFFD;&#xFFFD;&#x3AA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x368;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x3AA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4E6; requestAnimationFrame 60 &#xFFFD;&#x3A1;&#xFFFD;</p><p>That&apos;s not actually a valid assumption though. Maybe the user is on a low-powered device like an old smartphone. Or maybe the user is running some heavy program in the background. There are all kinds of reasons the browser might not be displaying frames at 60 frames a second. Maybe it&apos;s the year 2020 and all machines run at 240 frames a second now. Maybe the user is a gamer and has a CRT monitor running at 90 frame a second.</p><p>&#x2B5;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2CBB;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x427;&#xFFFD;&#x13C;&#xFFFD;&#xFFFD;&#x8863;&#xFFFD;&#xFB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B9;&#xFFFD;&#xF5;&#xFFFD;&#xFFFD;&#x1FE;&#x275;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x135;&#x379;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x8C78;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x6BA;&#xFFFD;&#x328;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#x429;&#xFFFD;&#xFFFD;&#xFFFD;&#x635;&#x133;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x438;&#xFFFD;&#xFFFD;&#x5B8;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x52D;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFF;&#xFFFD;&#xFFFD; 60 &#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2BE;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; 2020 &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x435;&#x136;&#xFFFD;&#xFFFD;&#xFFFD;&#xFF;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; 240 &#x5A1;&#xFFFD;&#xFFFD;&#x4B2;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x3F7;&#xFFFD;&#xFFFD;&#xFFFD;&#x4B2;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFF;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; 90 &#x5A1;&#xFFFD;&#xFFFD;CRT&#xFFFD;&#xFFFD;&#x2BE;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><p>You can see the problem in this example</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x423;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x53F;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><iframe class="webgl_example " style="width: 400px; height: 300px;" src="/webgl/lessons/../webgl-animation-frame-rate-issues.html"></iframe>
+
+
+
+<p>In the example above we want to rotate all of the &apos;F&apos;s at the same speed. The &apos;F&apos; in the middle is running full speed and is frame rate independent. The one on the left and the right are simulating if the browser was only running at 1/8th max speed for the current machine. The one on the left is NOT frame rate independent. The one on the right IS frame rate independent.</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2BE;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x435;&#x121;&#xFFFD; F &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x36C;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x676;&#xFFFD;&#xFFFD;&#xFFFD;&#x5EA;&#xFFFD;&#xFFFD;&#xFFFD;&#x43C;&#xFFFD;&#xFFFD;&#x121;&#xFFFD; F &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x536;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x22B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x435;&#x121;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x7F5;&#xFFFD;&#xFFFD;&#xFFFD;&#x123;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x535;&#xFFFD;&#x1F0;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x676;&#x235;&#xFFFD; 1/8 &#xFFFD;&#xFFFD;&#xFFFD;&#x435;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x7F5;&#x132;&#xFFFD;&#xFFFD;&#x1F6;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#x2A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4B1;&#x7F5;&#xFFFD;&#xFFFD;&#x1F6;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><p>Notice because the one on the left is not taking into account that the frame rate might be slow it&apos;s not keeping up. The one on the right though, even though it&apos;s running at 1/8 the frame rate it is keeping up with the middle one running at full speed.</p><p>&#xFFFD;&#xFFFD;&#x5E2;&#xFFFD;&#x28EC;&#xFFFD;&#xFFFD;&#xFFFD;&#x7F5;&#x132;&#xFFFD;&#xFB;&#xFFFD;&#x43F;&#xFFFD;&#xFFFD;&#x1F5;&#xFFFD;&#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#x2BF;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1FB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4B2;&#xFFFD;&#xFFFD;&#x236;&#xFFFD;&#xFFFD;&#x121;&#xFFFD;&#xFFFD;&#x4B1;&#x7F5;&#xFFFD;&#xFFFD;&#xFFFD;&#x23B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; 1/8 &#xFFFD;&#xFFFD;&#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x423;&#xFFFD;&#x234;&#xFFFD;&#xFFFD;&#xFFFD;&#x43C;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x22B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x421;&#xFFFD;</p><p>The way to make animation frame rate independent is to compute how much time it took between frames and use that to calcuate how much to animate this frame.</p><p>&#x2B9;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B6;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x137;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1E3;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5A1;&#x5AE;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B1;&#xFFFD;&#xFFFD;&#xFFFD;&#xE8EC;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFF;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><p>First off we need to get the time. Fortunately <code>requestAnimationFrame</code> passes us the time since the page was loaded when it calls us.</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4AA;&#xFFFD;&#xF5;&#xFFFD;&#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2F5;&#xFFFD;&#xFFFD;&#x1E3;&#xFFFD;&#x4B3;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5AE;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1FF;&#xFFFD;&#xFFFD;&#x535;&#xFFFD;&#xFFFD;&#xFFFD;<code>requestAnimationFrame</code>&#xFFFD;&#xFFFD;</p><p>I find it easiest if we get the time in seconds but since the <code>requestAnimationFrame</code> passes us the time in milliseconds (1000ths of a second) we need to multiply by 0.001 to get seconds.</p><p>&#xFFFD;&#x4B7;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1FA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5FB;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#x6B5;&#xFFFD;&#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;<code>requestAnimationFrame</code>&#xFFFD;&#xFFFD;&#xFFFD;&#x53A;&#xFFFD;&#xFFFD;&#xB8E8;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1E7;&#xFFFD;&#xFFFD;&#x5AE;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x123;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4AA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; 0.001 &#x221;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><p>So, we can then compute the delta time like this</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#x2E3;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1FF;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B1;&#xFFFD;&#xFFFD;</p><pre><code>    var then = 0;
+
+    requestAnimationFrame(drawScene);
+
+    // Draw the scene.
+    // &#xFFFD;&#xFFFD;&#xFFFD;&#x1B3;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;
+    function drawScene(now) {
+      // Convert the time to seconds
+      // &#x2B1;&#xFFFD;&#xFFFD;&#x5EA;&#xFFFD;&#xFFFD;&#x3AA;&#xFFFD;&#xFFFD;
+      now *= 0.001;
+      // Subtract the previous time from the current time
+      // &#xFFFD;&#xFFFD;&#x1F0;&#x2B1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x225;&#x5AE;&#x1F0;&#x2B1;&#xFFFD;&#xFFFD;
+      var deltaTime = now - then;
+      // Remember the current time for the next frame.
+      // &#x3AA;&#xFFFD;&#xFFFD;&#x4BB;&#x5A1;&#xFFFD;&#xFFFD;&#xBC;&#xFFFD;&#xFFFD;&#x1F0;&#x2B1;&#xFFFD;&#xFFFD;
+      then = now;
+
+       ...</code></pre>
+<p>Once we have the <code>deltaTime</code> in seconds then all our calculations can be in how many units per second we want something to happen. In this case <code>rotationSpeed</code> is 1.2 which means we want to rotate 1.2 radians per second. That&apos;s about 1/5 of a turn or in other words it will take about 5 seconds to turn around completely regardless of the frame rate.</p><p>&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1F5;&#xF5;&#xFFFD;<code>&#x2B1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</code>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1FF;&#xFFFD;&#xFFFD;&#x53C;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4AA;&#x2B5;&#xFFFD;&#x5B5;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFF;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5B4;&#xFFFD;&#x435;&#x134;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2BE;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;<code>rotationSpeed</code>&#x3AA; 1.2&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x3B6;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x3E3;&#xFFFD;&#xFFFD;&#xFF;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5EA; 1.2 &#x226;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x53C; 1/5 &#x226;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4EF0;&#x2F5;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1F6;&#xFFFD;&#xFFFD;&#x676;&#xFFFD;&#xFFFD;&#xFFFD;&#x4AA;&#xFFFD;&#xFFFD;&#x53C; 5 &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5EA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><pre><code>  rotation[1] += rotationSpeed * deltaTime;</code></pre>
+<p>Here&apos;s that one working.</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2E1;&#xFFFD;</p><iframe class="webgl_example" style=" " src="/webgl/resources/editor.html?url=/webgl/lessons/../webgl-animation.html"></iframe>
+
+
+
+
+
+<p><a href="http://webglfundamentals.org/webgl/webgl-animation.html" target="_blank">click here to open in a separate window</a></p><p><a href="http://webglfundamentals.org/webgl/webgl-animation.html" target="_blank">&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xB4;&#xFFFD;&#xFFFD;&#x6B4;&#xFFFD;&#xFFFD;&#xFFFD;</a></p><p>You aren&apos;t likely to see a difference from the one at the top of this page unless you are on a slow machine but if you don&apos;t make your animations frame rate independent you&apos;ll likely have some users that are getting a very different experience than you planned.</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B9;&#xFFFD;&#xF5;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x8C78;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x23B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x73F;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4B3;&#xFFFD;&#x6DA5;&#xFFFD;&#xFFFD;&#x2BE;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFB;&#xFFFD;&#xFFFD;&#x2B9;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4BB;&#x429;&#xFFFD;&#xFB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1BB;&#xFFFD;&#xFFFD;&#x13A;&#x732;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x9863;</p><p>Next up <a href="http://webglfundamentals.org/webgl/lessons/webgl-3d-textures.html" target="_blank">how to apply textures</a>.</p><p>&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;<a href="http://webglfundamentals.org/webgl/lessons/webgl-3d-textures.html" target="_blank">&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</a></p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><h2 id="dont-use-setinterval-or-settimeout">Don&apos;t use setInterval or setTimeout!</h2><h2 id="&#xFFFD;&#xFFFD;&#x4AB;&#x2B9;&#xFFFD;&#xFFFD;-setinterval-&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;-settimeout&#xFFFD;&#xFFFD;">&#xFFFD;&#xFFFD;&#x4AA;&#x2B9;&#xFFFD;&#xFFFD; setInterval &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; setTimeout&#xFFFD;&#xFFFD;</h2><p>If you&apos;ve been programming animation in JavaScript in the past you might have used either <code>setInterval</code> or <code>setTimeout</code> to get your drawing function to be called.</p><p>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B9;&#xFFFD;&#xFFFD; JavaScript &#xFFFD;&#xFFFD;&#xFFFD;&#x336;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B9;&#xFFFD;&#xFFFD;<code>setInterval</code>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;<code>setTimeout</code>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x13B;&#xFFFD;&#xFFFD;&#x1BA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><p>The problems with using <code>setInterval</code> or <code>setTimeout</code> to do animation are two fold. First off both <code>setInterval</code> and <code>setTimeout</code> have no relation to the browser displaying anything. They aren&apos;t synced to when the browser is going to draw a new frame and so can be out of sync with the user&apos;s machine. If you use <code>setInterval</code> or <code>setTimeout</code> and assume 60 frames a second and the user&apos;s machine is actually running some other frame rate you&apos;ll be out of sync with their machine.</p><p>&#x2B9;&#xFFFD;&#xFFFD;<code>setInterval</code>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;<code>setTimeout</code>&#xFFFD;&#xFFFD;&#x2B5;&#xFFFD;&#x5B6;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2863;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;<code>setInterval</code>&#xFFFD;&#xFFFD;<code>setTimeout</code>&#xFFFD;&#xFFFD;&#x2BE;&#xFFFD;&#x3BA;&#x3B6;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFB;&#xFFFD;&#x439;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xB5;&#xFFFD;&#x5A1;&#x2B1;&#xFFFD;&#xFFFD;&#xFFFD;&#x1F2;&#xFFFD;&#xFFFD;&#xFFFD;&#x36C;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x8C78;&#x4B2;&#xFFFD;&#xFFFD;&#x36C;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B9;&#xFFFD;&#xFFFD;<code>setTinterval</code>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;<code>setTimeout</code>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x8DA8;&#xFF;&#xFFFD;&#xFFFD; 60 &#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x8C78;&#x2B5;&#xFFFD;&#xFFFD;&#xFFFD;&#x3FB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5A1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1F5;&#xFFFD;&#xFFFD;&#x8C78;&#xFFFD;&#xFFFD;&#x36C;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><p>The other problem is the browser has no idea why you&apos;re using <code>setInterval</code> or <code>setTimeout</code>. So for example, even when your page is not visible, like when it&apos;s not the front tab, the browser still has to execute your code. Maybe you&apos;re using <code>setTimeout</code> or <code>setInterval</code> to check for new mail or tweets. There&apos;s no way for the browser to know. That&apos;s fine if you&apos;re just checking every few seconds for new messages but it&apos;s not fine if you&apos;re trying to draw 1000 objects in WebGL. You&apos;ll be effectively DOSing the user&apos;s machine with your invisible tab drawing stuff they can&apos;t even see.</p><p>&#xFFFD;&#xFFFD;&#x4BB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5AA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x3AA;&#x2B2;&#xF4;&#xFFFD;&#xFFFD;&#x2B9;&#xFFFD;&#xFFFD;<code>setInterval</code>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;<code>setTimeout</code>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x78EC;&#xFFFD;&#xFFFD;&#x2B9;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x4B3;&#xFFFD;&#x6CBB;&#xFFFD;&#x27C;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1F5;&#xFFFD;&#x1F0;&#xFFFD;&#x131;&#xFFFD;&#x1E9;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x23B;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5B4;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x134;&#xFFFD;&#xFFFD;&#xB863;&#x4B2;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B9;&#xFFFD;&#xFFFD;<code>setTimeout</code>&#xFFFD;&#xFFFD;<code>setInterval</code>&#xFFFD;&#x9FF4;&#xFFFD;&#xFFFD;&#xFFFD;&#x2BC;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; tweets&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5AA;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5BB;&#xFFFD;&#x1FC;&#xFFFD;&#xFFFD;&#xFFFD;&#xFF;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x3E2;&#xFFFD;&#xFFFD;&#xFB;&#xFFFD;&#xFFFD;&#xFFFD;&#x28EC;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x6B3;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; WebGL &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD; 1000 &#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x372;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2E1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x1FF;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x6BB;&#xFFFD;&#xFFFD;&#x1B6;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x131;&#xFFFD;&#x1E9;&#x2B5;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x6B9;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFB;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x8C78;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B9;&#xFFFD;&#xFFFD;&#xFFFD;&#x1FF;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;</p><p><code>requestAnimationFrame</code> solves both of these issues. It calls you at just the right time to sync your animation with the screen and it also only calls you if your tab is visible.</p><p><code>requestAnimationFrame</code>&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2863;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2B1;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x2BE;&#xFFFD;&#xFFFD;&#x36C;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#x5BB;&#xFFFD;&#xFFFD;&#xFFFD;&#x6B1;&#xFFFD;&#x1E9;&#xFFFD;&#x27C;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xFFFD;&#xB5;&#xFFFD;&#xFFFD;&#xE1;&#xFFFD;</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="WebGL-Resizing-the-Canvas.html" class="navigation navigation-prev " aria-label="Previous page: WebGL Resizing the Canvas">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="WebGL-3D-Textures.html" class="navigation navigation-next " aria-label="Next page: WebGL 3D - Textures">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"WebGL - Animation","level":"1.9.4","depth":2,"next":{"title":"WebGL 3D - Textures","level":"1.9.5","depth":2,"path":"misc/WebGL-3D-Textures.md","ref":"misc/WebGL-3D-Textures.md","articles":[]},"previous":{"title":"WebGL Resizing the Canvas","level":"1.9.3","depth":2,"path":"misc/WebGL-Resizing-the-Canvas.md","ref":"misc/WebGL-Resizing-the-Canvas.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"misc/WebGL-Animation.md","mtime":"2016-10-17T05:33:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-17T05:36:02.194Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,998 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>WebGL 3D Perspective · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="WebGL-3D-Cameras.html" />
+    
+    
+    <link rel="prev" href="WebGL-Orthographic-3D.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../fundamentals/">
+            
+                <a href="../fundamentals/">
+            
+                    
+                    Fundamentals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../fundamentals/WebGL-Fundamentals.html">
+            
+                <a href="../fundamentals/WebGL-Fundamentals.html">
+            
+                    
+                    WebGL Fundamentals
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../fundamentals/WebGL-How-It-Works.html">
+            
+                <a href="../fundamentals/WebGL-How-It-Works.html">
+            
+                    
+                    WebGL How It Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../fundamentals/WebGL-Shaders-and-GLSL.html">
+            
+                <a href="../fundamentals/WebGL-Shaders-and-GLSL.html">
+            
+                    
+                    WebGL Shaders and GLSL
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../image-processing/">
+            
+                <a href="../image-processing/">
+            
+                    
+                    Image Processing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../image-processing/WebGL-Image-Processing.html">
+            
+                <a href="../image-processing/WebGL-Image-Processing.html">
+            
+                    
+                    WebGL Image Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../image-processing/WebGL-Image-Processing-Continued.html">
+            
+                <a href="../image-processing/WebGL-Image-Processing-Continued.html">
+            
+                    
+                    WebGL Image Processing Continued
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../2D-translation/">
+            
+                <a href="../2D-translation/">
+            
+                    
+                    2D translation, rotation, scale, matrix math
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../2D-translation/WebGL-2D-Translation.html">
+            
+                <a href="../2D-translation/WebGL-2D-Translation.html">
+            
+                    
+                    WebGL 2D Translation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../2D-translation/WebGL-2D-Rotation.html">
+            
+                <a href="../2D-translation/WebGL-2D-Rotation.html">
+            
+                    
+                    WebGL 2D Rotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../2D-translation/WebGL-2D-Scale.html">
+            
+                <a href="../2D-translation/WebGL-2D-Scale.html">
+            
+                    
+                    WebGL 2D Scale
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../2D-translation/WebGL-2D-Matrices.html">
+            
+                <a href="../2D-translation/WebGL-2D-Matrices.html">
+            
+                    
+                    WebGL 2D Matrices
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3D
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="WebGL-Orthographic-3D.html">
+            
+                <a href="WebGL-Orthographic-3D.html">
+            
+                    
+                    WebGL - Orthographic 3D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="WebGL-3D-Perspective.html">
+            
+                <a href="WebGL-3D-Perspective.html">
+            
+                    
+                    WebGL 3D Perspective
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="WebGL-3D-Cameras.html">
+            
+                <a href="WebGL-3D-Cameras.html">
+            
+                    
+                    WebGL 3D - Cameras
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../lighting/">
+            
+                <a href="../lighting/">
+            
+                    
+                    Lighting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../lighting/WebGL-3D-Directional-Lighting.html">
+            
+                <a href="../lighting/WebGL-3D-Directional-Lighting.html">
+            
+                    
+                    WebGL 3D - Directional Lighting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../lighting/WebGL-3D-Point-Lighting.html">
+            
+                <a href="../lighting/WebGL-3D-Point-Lighting.html">
+            
+                    
+                    WebGL 3D - Point Lighting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Structure-and-Organization/">
+            
+                <a href="../Structure-and-Organization/">
+            
+                    
+                    Structure and Organization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Structure-and-Organization/WebGL-Less-Code-More-Fun.html">
+            
+                <a href="../Structure-and-Organization/WebGL-Less-Code-More-Fun.html">
+            
+                    
+                    WebGL - Less Code, More Fun
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Structure-and-Organization/WebGL-Drawing-Multiple-Things.html">
+            
+                <a href="../Structure-and-Organization/WebGL-Drawing-Multiple-Things.html">
+            
+                    
+                    WebGL - Drawing Multiple Things
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Structure-and-Organization/WebGL-Scene-Graphs.html">
+            
+                <a href="../Structure-and-Organization/WebGL-Scene-Graphs.html">
+            
+                    
+                    WebGL - Scene Graphs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../techniques/">
+            
+                <a href="../techniques/">
+            
+                    
+                    Techniques
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../techniques/WebGL-2D-DrawImage.html">
+            
+                <a href="../techniques/WebGL-2D-DrawImage.html">
+            
+                    
+                    WebGL 2D - DrawImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../techniques/WebGL-2D-Matrix-Stack.html">
+            
+                <a href="../techniques/WebGL-2D-Matrix-Stack.html">
+            
+                    
+                    WebGL 2D - Matrix Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../techniques/WebGL-Text-HTML.html">
+            
+                <a href="../techniques/WebGL-Text-HTML.html">
+            
+                    
+                    WebGL Text - HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../techniques/WebGL-Text-Canvas-2D.html">
+            
+                <a href="../techniques/WebGL-Text-Canvas-2D.html">
+            
+                    
+                    WebGL Text - Canvas 2D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../techniques/WebGL-Text-Using-a-Texture.html">
+            
+                <a href="../techniques/WebGL-Text-Using-a-Texture.html">
+            
+                    
+                    WebGL Text - Using a Texture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../techniques/WebGL-Text-Using-a-Glyph-Texture.html">
+            
+                <a href="../techniques/WebGL-Text-Using-a-Glyph-Texture.html">
+            
+                    
+                    WebGL Text - Using a Glyph Texture
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../misc/">
+            
+                <a href="../misc/">
+            
+                    
+                    Misc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../misc/WebGL-Setup-And-Installation.html">
+            
+                <a href="../misc/WebGL-Setup-And-Installation.html">
+            
+                    
+                    WebGL Setup And Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../misc/WebGL-Boilerplate.html">
+            
+                <a href="../misc/WebGL-Boilerplate.html">
+            
+                    
+                    WebGL Boilerplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../misc/WebGL-Resizing-the-Canvas.html">
+            
+                <a href="../misc/WebGL-Resizing-the-Canvas.html">
+            
+                    
+                    WebGL Resizing the Canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../misc/WebGL-Animation.html">
+            
+                <a href="../misc/WebGL-Animation.html">
+            
+                    
+                    WebGL - Animation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../misc/WebGL-3D-Textures.html">
+            
+                <a href="../misc/WebGL-3D-Textures.html">
+            
+                    
+                    WebGL 3D - Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../misc/WebGL-Using-2-or-More-Textures.html">
+            
+                <a href="../misc/WebGL-Using-2-or-More-Textures.html">
+            
+                    
+                    WebGL Using 2 or More Textures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../misc/WebGL-and-Alpha.html">
+            
+                <a href="../misc/WebGL-and-Alpha.html">
+            
+                    
+                    WebGL and Alpha
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../misc/WebGL-2D-vs-3D-libraries.html">
+            
+                <a href="../misc/WebGL-2D-vs-3D-libraries.html">
+            
+                    
+                    WebGL - 2D vs 3D libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../misc/WebGL-Anti-Patterns.html">
+            
+                <a href="../misc/WebGL-Anti-Patterns.html">
+            
+                    
+                    WebGL - Anti-Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Helper-API-Docs/">
+            
+                <a href="../Helper-API-Docs/">
+            
+                    
+                    Helper API Docs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../TWGL-A-tiny-WebGL-helper-library/">
+            
+                <a href="../TWGL-A-tiny-WebGL-helper-library/">
+            
+                    
+                    TWGL, A tiny WebGL helper library
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../术语/">
+            
+                <a href="../术语/">
+            
+                    
+                    术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <a target="_blank" href="https://github.com/greggman/webgl-fundamentals">
+            
+                    
+                    github
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >WebGL 3D Perspective</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="webgl-3d-perspective">WebGL 3D Perspective</h1><h1 id="webgl-3d-&#x900F;&#x89C6;">WebGL 3D &#x900F;&#x89C6;</h1><p>This post is a continuation of a series of posts about WebGL. The first started with fundamentals and the previous was about 3D Basics. If you haven&apos;t read those please view them first.</p><p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x7EE7;&#x7EED;&#x5B66;&#x4E60;WebGL&#x3002;&#x672C;&#x6587;&#x5047;&#x5B9A;&#x4F60;&#x5DF2;&#x7ECF;&#x5BF9;<a href="http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html" target="_blank">WebGL&#x57FA;&#x7840;</a>&#xFF0C;<a href="http://webglfundamentals.org/webgl/lessons/webgl-3d-orthographic.html" target="_blank">3D&#x57FA;&#x7840;</a>&#x6709;&#x6240;&#x4E86;&#x89E3;&#x3002;&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x672A;&#x9605;&#x8BFB;&#x8FC7;&#x8FD9;&#x4E9B;&#x7AE0;&#x8282;&#xFF0C;&#x8BF7;&#x5148;&#x79FB;&#x6B65;&#x5230;&#x76F8;&#x5E94;&#x7AE0;&#x8282;&#x3002;</p><p>In the last post we went over how to do 3D but that 3D didn&apos;t have any perspective. It was using what&apos;s called an &quot;orthographic&quot; view which has its uses but it&apos;s generally not what people want when they say &quot;3D&quot;.</p><p>&#x4E0A;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x4E86;&#x5982;&#x4F55;&#x5B9E;&#x73B0;3D&#xFF0C;&#x4E0D;&#x8FC7;&#x8BE5;&#x201C;3D&#x201D;&#x4E0D;&#x5177;&#x6709;&#x4EFB;&#x4F55;&#x900F;&#x89C6;&#x6548;&#x679C;&#xFF08;perspective&#xFF09;&#x3002;&#x8FD9;&#x79CD;&#x201C;3D&#x201D;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x201C;&#x6B63;&#x4EA4;&#xFF08;orthographic&#xFF09;&#x201D;&#x89C6;&#x56FE;&#xFF0C;&#x6B63;&#x4EA4;&#x89C6;&#x56FE;&#x5176;&#x5B9E;&#x4E5F;&#x6709;&#x5176;&#x7528;&#x6B66;&#x4E4B;&#x5730;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x662F;&#x7528;&#x6765;&#x5448;&#x73B0;&#x901A;&#x5E38;&#x610F;&#x4E49;&#x7684;&#x201C;3D&#x201D;&#x7684;&#x3002;</p><p>Instead we need to add perspective. Just what is perspective? It&apos;s basically the feature that things that are further away appear smaller.</p><p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x901A;&#x5E38;&#x610F;&#x4E49;&#x7684;&#x201C;3D&#x201D;&#xFF0C;&#x9700;&#x8981;&#x4E3A;&#x5176;&#x6DFB;&#x52A0;&#x900F;&#x89C6;&#x6548;&#x679C;&#x3002;&#x90A3;&#x4E48;&#x95EE;&#x9898;&#x6765;&#x4E86;&#xFF0C;&#x4EC0;&#x4E48;&#x662F;&#x900F;&#x89C6;&#xFF1F;&#x8D8A;&#x8FDC;&#x7684;&#x7269;&#x4F53;&#x770B;&#x8D77;&#x6765;&#x4F1A;&#x8D8A;&#x5C0F;&#xFF0C;&#x8FD9;&#x79CD;&#x6548;&#x679C;&#x5C31;&#x662F;&#x900F;&#x89C6;&#x6548;&#x679C;&#x3002;
+<img src="http://oc3wui92y.bkt.clouddn.com/SVG/webgl/perspective-example.svg"></p><p>Looking at the example above we see that things further away are drawn smaller. Given our current sample one easy way to make it so that things that are further away appear smaller would be to divide the clip space X and Y by Z.</p><p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x90A3;&#x4E9B;&#x8D8A;&#x8FDC;&#x7684;&#x7269;&#x4F53;&#x4F1A;&#x88AB;&#x7ED8;&#x5236;&#x5F97;&#x8D8A;&#x5C0F;&#x3002;&#x4E3A;&#x4E86;&#x5728;&#x76EE;&#x524D;&#x6837;&#x4F8B;&#x4E2D;&#x5B9E;&#x73B0;&#x201C;&#x8D8A;&#x8FDC;&#x7684;&#x7269;&#x4F53;&#x8D8A;&#x5C0F;&#x201D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7C97;&#x66B4;&#x5730;&#x5C06;&#x88C1;&#x526A;&#x7A7A;&#x95F4;&#x4E2D;&#x9876;&#x70B9;&#x7684;X&#xFF0C;Y&#x5750;&#x6807;&#x5206;&#x522B;&#x9664;&#x4EE5;Z&#x5750;&#x6807;&#x3002;</p><p>Think of it this way: If you have a line from (10, 15) to (20,15) it&apos;s 10 units long. In our current sample it would be drawn 10 pixels long. But if we divide by Z then for example if Z is 1</p><p>&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x60F3;&#xFF1A;&#x6709;&#x4E00;&#x4E2A;&#x4ECE;&#xFF08;10&#xFF0C;15&#xFF09;&#x5230;&#xFF08;20&#xFF0C;15&#xFF09;&#x957F;&#x5EA6;&#x4E3A;10&#x5355;&#x4F4D;&#x7684;&#x76F4;&#x7EBF;L&#x3002;&#x5728;&#x76EE;&#x524D;&#x7684;&#x6837;&#x4F8B;&#x4E2D;&#xFF0C;L&#x7684;&#x957F;&#x5EA6;&#x5C06;&#x4F1A;&#x662F;10&#x50CF;&#x7D20;&#x3002;&#x5982;&#x679C;&#x9664;&#x4EE5;&#x503C;&#x4E3A;1&#x7684;Z&#x5750;&#x6807;&#xFF1A;</p><p>$$10 / 1 = 10$$</p><p>$$20 / 1 = 20$$</p><p>$$abs(10-20) = 10$$</p><p>it would be 10 pixels long, If Z is 2 it would be</p><p>L&#x7684;&#x957F;&#x5EA6;&#x4F1A;&#x662F;10&#x50CF;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x9664;&#x4EE5;&#x503C;&#x4E3A;2&#x7684;Z&#x5750;&#x6807;&#xFF1A;</p><p>$$10 / 2 = 5$$</p><p>$$20 / 2 = 10$$</p><p>$$abs(5-10) = 5$$</p><p>5 pixels long. At Z = 3 it would be</p><p>L&#x7684;&#x957F;&#x5EA6;&#x4F1A;&#x662F;5&#x50CF;&#x7D20;&#x3002;&#x5982;&#x679C;$Z=3$&#xFF1A;</p><p>$$10 / 3 = 3.333$$</p><p>$$20 / 3 = 6.666$$</p><p>$$abs(3.333-6.666) = 3.333$$</p><p>You can see that as Z increases, as it gets further away, we&apos;ll end up drawing it smaller. If we divide in clip space we might get better results because Z will be a smaller number (-1 to +1). If we add a fudgeFactor to multiply Z before we divide we can adjust how much smaller things get for a given distance.</p><p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x968F;&#x7740;Z&#x7684;&#x589E;&#x957F;&#xFF0C;&#x7269;&#x4F53;&#x8D8A;&#x6765;&#x8D8A;&#x8FDC;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5C06;&#x5176;&#x7ED8;&#x5236;&#x5F97;&#x8D8A;&#x6765;&#x8D8A;&#x5C0F;&#x3002;&#x5982;&#x679C;&#x5C06;&#x9664;&#x6CD5;&#x8FD0;&#x7B97;&#x653E;&#x5728;&#x88C1;&#x526A;&#x7A7A;&#x95F4;&#x4E2D;&#x8FDB;&#x884C;&#xFF0C;&#x7ED3;&#x679C;&#x4F1A;&#x66F4;&#x52A0;&#x5C3D;&#x5982;&#x4EBA;&#x610F;&#xFF0C;&#x56E0;&#x4E3A;&#x7684;Z&#x5750;&#x6807;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x5C0F;&#x7684;&#x6570;&#x503C;&#xFF08;-1 ~ +1&#xFF09;&#x3002;&#x8FD8;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<em>fudgeFactor</em>&#xFF08;&#x9644;&#x52A0;&#x7CFB;&#x6570;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x4E58;&#x4EE5;Z&#xFF0C;&#x5982;&#x6B64;&#x4E00;&#x6765;&#xFF0C;&#x5728;&#x505A;&#x9664;&#x6CD5;&#x8FD0;&#x7B97;&#x4E4B;&#x524D;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x8DDD;&#x79BB;&#x8C03;&#x6574;&#x7F29;&#x5C0F;&#x7A0B;&#x5EA6;&#x3002;</p><p>Let&apos;s try it. First let&apos;s change the vertex shader to divide by Z after we&apos;ve multiplied it by our &quot;fudgeFactor&quot;.</p><p>&#x6765;&#x8BD5;&#x4E00;&#x8BD5;&#x5427;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x4FEE;&#x6539;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#xFF0C;&#x5728;Z&#x5750;&#x6807;&#x4E58;&#x4EE5;&#x201C;fudgeFactor&#x201D;&#x4E4B;&#x540E;&#xFF0C;&#x9876;&#x70B9;&#x7684;X&#xFF0C;Y&#x5750;&#x6807;&#x5206;&#x522B;&#x9664;&#x4EE5;Z&#xFF1A;</p><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;2d-vertex-shader&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;x-shader/x-vertex&quot;</span>&gt;</span><span class="actionscript">
+...
+uniform float u_fudgeFactor;
+...
+void main() {
+  <span class="hljs-comment">// Multiply the position by the matrix.</span>
+  vec4 position = u_matrix * a_position;
+
+  <span class="hljs-comment">// Adjust the z to divide by</span>
+  float zToDivideBy = <span class="hljs-number">1.0</span> + position.z * u_fudgeFactor;
+
+  <span class="hljs-comment">// Divide x and y by z.</span>
+  gl_Position = vec4(position.xy / zToDivideBy, position.zw);
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+<p>Note, because Z in clip space goes from -1 to +1 I added 1 to get zToDivideBy to go from 0 to +2 * fudgeFactor</p><p>&#x6CE8;&#x610F;&#xFF0C;&#x7531;&#x4E8E;&#x88C1;&#x526A;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;Z&#x5750;&#x6807;&#x8303;&#x56F4;&#x4E3A;-1 ~ +1&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E0A;&#x52A0;1&#xFF0C;&#x4F7F;&#x5F97;<em>zToDivideBy</em>&#x5728;0 ~ 2 _ _fudgeFactor*&#x4E4B;&#x95F4;&#x3002;</p><p>We also need to update the code to let us set the fudgeFactor.</p><p>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8BBE;&#x7F6E;<em>fudgeFactor</em>&#xFF0C;&#x6240;&#x4EE5;&#x518D;&#x6B21;&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#xFF1A;</p><pre><code class="lang-js">...
+  var fudgeLocation = gl.getUniformLocation(program, <span class="hljs-string">&quot;u_fudgeFactor&quot;</span>);
+
+  ...
+  var fudgeFactor = <span class="hljs-number">1</span>;
+  ...
+  function drawScene() {
+    ...
+    <span class="hljs-comment">// Set the fudgeFactor</span>
+    gl.uniform1f(fudgeLocation, fudgeFactor);
+
+    <span class="hljs-comment">// Draw the geometry.</span>
+    gl.drawArrays(gl.TRIANGLES, <span class="hljs-number">0</span>, <span class="hljs-number">16</span> * <span class="hljs-number">6</span>);</code></pre>
+<p>And here&apos;s the result.</p><p>&#x5F97;&#x5230;&#x7ED3;&#x679C;&#xFF1A;</p><p><iframe class="webgl_example" style=" " src="http://webglfundamentals.org/webgl/resources/editor.html?url=/webgl/lessons/../webgl-3d-perspective.html"></iframe>
+<a href="http://webglfundamentals.org/webgl/webgl-3d-perspective.html" target="_blank">&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x5728;&#x65B0;&#x7A97;&#x53E3;&#x4E2D;&#x6253;&#x5F00;</a></p><p>If it&apos;s not clear drag the &quot;fudgeFactor&quot; slider from 1.0 to 0.0 to see what things used to look like before we added our divide by Z code.</p><p>&#x5982;&#x679C;&#x6548;&#x679C;&#x770B;&#x8D77;&#x6765;&#x4E0D;&#x662F;&#x5F88;&#x660E;&#x663E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x201C;fudgeFactor&#x201D;&#x6ED1;&#x52A8;&#x6761;&#x4ECE;1.0&#x62D6;&#x52A8;&#x81F3;0.0&#x6765;&#x89C2;&#x5BDF;&#x5728;&#x6DFB;&#x52A0;&#x9664;&#x6CD5;&#x56E0;&#x5B50;&#x4E4B;&#x524D;&#x7684;&#x6548;&#x679C;&#x3002;
+<img src="http://oc3wui92y.bkt.clouddn.com/image/webgl/orthographic-vs-perspective.png"></p><p>It turns out WebGL takes the x,y,z,w value we assign to gl_Position in our vertex shader and divides it by w automatically.</p><p>&#x5728;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x4E2D;&#xFF0C;<code>gl_Position</code>&#x63A5;&#x6536;&#x5177;&#x6709;x&#xFF0C;y&#xFF0C;z&#xFF0C;w&#x503C;&#x7684;4&#x7EF4;&#x5411;&#x91CF;&#xFF0C;&#x4E4B;&#x540E;&#xFF0C;WebGL&#x4F1A;&#x81EA;&#x52A8;&#x5C06;w&#x4F5C;&#x4E3A;&#x9664;&#x6CD5;&#x56E0;&#x5B50;&#x8FDB;&#x884C;&#x9664;&#x6CD5;&#x8FD0;&#x7B97;&#x3002;</p><p>We can prove this very easily by changing the shader and instead of doing the division ourselves, put zToDivideBy in gl_Position.w.</p><p>&#x4E0D;&#x7528;&#x624B;&#x52A8;&#x8FDB;&#x884C;&#x9664;&#x6CD5;&#x8FD0;&#x7B97;&#xFF0C;&#x53EA;&#x9700;&#x5C06;<code>zToDivideBy</code>&#x653E;&#x5728;<code>gl_Position.w</code>&#x7684;&#x4F4D;&#x7F6E;&#x5373;&#x53EF;&#xFF1A;</p><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;2d-vertex-shader&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;x-shader/x-vertex&quot;</span>&gt;</span><span class="actionscript">
+...
+uniform float u_fudgeFactor;
+...
+void main() {
+  <span class="hljs-comment">// Multiply the position by the matrix.</span>
+  vec4 position = u_matrix * a_position;
+
+  <span class="hljs-comment">// Adjust the z to divide by</span>
+  float zToDivideBy = <span class="hljs-number">1.0</span> + position.z * u_fudgeFactor;
+
+  <span class="hljs-comment">// Divide x, y and z by zToDivideBy</span>
+  gl_Position = vec4(position.xyz,  zToDivideBy);
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+<p>and see how it&apos;s exactly the same.
+&#x6548;&#x679C;&#x4E0E;&#x4E4B;&#x524D;&#x4E00;&#x6837;&#xFF1A;</p><p><iframe class="webgl_example" style=" " src="http://webglfundamentals.org/webgl/resources/editor.html?url=/webgl/lessons/../webgl-3d-perspective-w.html"></iframe>
+<a href="http://webglfundamentals.org/webgl/resources/editor.html?url=/webgl/lessons/../webgl-3d-perspective-w.html" target="_blank">&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x5728;&#x65B0;&#x7A97;&#x53E3;&#x4E2D;&#x6253;&#x5F00;</a></p><p>Why is the fact that WebGL automatically divides by W useful? Because now, using more matrix magic, we can just use yet another matrix to copy z to w.</p><p>A Matrix like this</p><p>WebGL&#x4F1A;&#x81EA;&#x52A8;&#x5C06;W&#x4F5C;&#x4E3A;&#x9664;&#x6CD5;&#x56E0;&#x5B50;&#x8FDB;&#x884C;&#x9664;&#x6CD5;&#x8FD0;&#x7B97;&#xFF0C;&#x8FD9;&#x9879;&#x7279;&#x6027;&#x5F88;&#x6709;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x77E9;&#x9635;&#x6765;&#x8868;&#x8FBE;&#x6700;&#x7EC8;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#xFF0C;&#x5B9E;&#x73B0;&#x5C06;z&#x7684;&#x503C;&#x590D;&#x5236;&#x5230;w&#x3002;</p><p>&#x4E0A;&#x8FF0;&#x77E9;&#x9635;&#xFF1A;
+1, 0, 0, 0,
+0, 1, 0, 0,
+0, 0, 1, 1,
+0, 0, 0, 0,</p><p>will copy z to w. You can look at each of those columns as</p><p>which when simplified is</p><p>&#x8BE5;&#x77E9;&#x9635;&#x5C06;z&#x7684;&#x503C;&#x590D;&#x5236;&#x5230;w&#x3002;&#x53EF;&#x4EE5;&#x5C06;&#x6BCF;&#x5217;&#x770B;&#x4F5C;&#xFF1A;
+x_out = x_in <em> 1 +
+        y_in </em> 0 +
+        z_in <em> 0 +
+        w_in </em> 0 ;</p><p>y_out = x_in <em> 0 +
+        y_in </em> 1 +
+        z_in <em> 0 +
+        w_in </em> 0 ;</p><p>z_out = x_in <em> 0 +
+        y_in </em> 0 +
+        z_in <em> 1 +
+        w_in </em> 0 ;</p><p>w_out = x_in <em> 0 +
+        y_in </em> 0 +
+        z_in <em> 1 +
+        w_in </em> 0 ;</p><p>&#x5316;&#x7B80;&#x540E;&#x5F97;&#xFF1A;
+x_out = x_in;
+y_out = y_in;
+z_out = z_in;
+w_out = z_in;</p><p>We can add the plus 1 we had before with this matrix since we know w_in is always 1.0.</p><p>&#x7531;&#x4E8E;w_in&#x7684;&#x521D;&#x59CB;&#x503C;&#x59CB;&#x7EC8;&#x4E3A;1.0&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x77E9;&#x9635;&#x53F3;&#x4E0B;&#x89D2;&#x7684;&#x503C;&#x4E3A;1&#xFF1A;
+1, 0, 0, 0,
+0, 1, 0, 0,
+0, 0, 1, 1,
+0, 0, 0, 1,</p><p>that will change the W calculation to</p><p>W&#x7684;&#x503C;&#x5C06;&#x4F1A;&#x53D8;&#x6210;&#xFF1A;
+w_out = x_in <em> 0 +
+        y_in </em> 0 +
+        z_in <em> 1 +
+        w_in </em> 1 ;</p><p>and since we know w_in = 1.0 then that&apos;s really</p><p>&#x7531;&#x4E8E;w_in = 1.0&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x7EC8;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&#xFF1A;
+w_out = z_in + 1;</p><p>Finally we can work our fudgeFactor back in if the matrix is this</p><p>which means</p><p>&#x6700;&#x540E;&#x5C06;&#x201C;fudgeFactor&#x201D;&#x5E26;&#x5165;&#x5230;&#x77E9;&#x9635;&#x4E2D;&#xFF1A;
+1, 0, 0, 0,
+0, 1, 0, 0,
+0, 0, 1, fudgeFactor,
+0, 0, 0, 1,</p><p>&#x4E0E;&#x5176;&#x7B49;&#x4EF7;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&#xFF1A;
+w_out = x_in <em> 0 +
+        y_in </em> 0 +
+        z_in <em> fudgeFactor +
+        w_in </em> 1 ;</p><p>and simplified that&apos;s</p><p>&#x5316;&#x7B80;&#x540E;&#x53EF;&#x5F97;&#xFF1A;
+w_out = z_in * fudgeFactor + 1;</p><p>So, let&apos;s modify the program again to just use matrices.</p><p>First let&apos;s put the vertex shader back. It&apos;s simple again</p><p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5C1D;&#x8BD5;&#x5C06;&#x4E0A;&#x8FF0;&#x77E9;&#x9635;&#x5E94;&#x7528;&#x5230;&#x7A0B;&#x5E8F;&#x4E2D;&#x3002;</p><p>&#x9996;&#x5148;&#xFF0C;&#x8FD8;&#x539F;&#x9876;&#x70B9;&#x7740;&#x8272;&#x5668;&#x3002;&#x4EE3;&#x7801;&#x53C8;&#x53D8;&#x5F97;&#x7B80;&#x6D01;&#x4E86;&#xFF1A;</p><pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;2d-vertex-shader&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;x-shader/x-vertex&quot;</span>&gt;</span><span class="actionscript">
+uniform mat4 u_matrix;
+
+<span class="hljs-keyword">void</span> main() {
+  <span class="hljs-comment">// Multiply the position by the matrix.</span>
+  gl_Position = u_matrix * a_position;
+  ...
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+<p>Next let&apos;s make a function to make our Z &#x2192; W matrix.</p><p>&#x7136;&#x540E;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x751F;&#x6210;Z &#x2192; W&#x77E9;&#x9635;&#x7684;&#x51FD;&#x6570;&#xFF1A;</p><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makeZToWMatrix</span>(<span class="hljs-params">fudgeFactor</span>) </span>{
+  <span class="hljs-keyword">return</span> [
+    <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
+    <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
+    <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, fudgeFactor,
+    <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>,
+  ];
+}</code></pre>
+<p>and we&apos;ll change the code to use it.</p><p>&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x5E94;&#x7528;&#x8BE5;&#x51FD;&#x6570;&#xFF1A;</p><pre><code class="lang-js">...
+    <span class="hljs-comment">// Compute the matrices</span>
+    <span class="hljs-keyword">var</span> zToWMatrix =
+        makeZToWMatrix(fudgeFactor);
+
+    ...
+
+    <span class="hljs-comment">// Multiply the matrices.</span>
+    <span class="hljs-keyword">var</span> matrix = matrixMultiply(scaleMatrix, rotationZMatrix);
+    matrix = matrixMultiply(matrix, rotationYMatrix);
+    matrix = matrixMultiply(matrix, rotationXMatrix);
+    matrix = matrixMultiply(matrix, translationMatrix);
+    matrix = matrixMultiply(matrix, projectionMatrix);
+    matrix = matrixMultiply(matrix, zToWMatrix);
+
+    ...
+</code></pre>
+<p>and note, again, it&apos;s exactly the same.</p><p>&#x6548;&#x679C;&#x4E0E;&#x4E4B;&#x524D;&#x4E00;&#x6837;&#xFF1A;</p><p><iframe class="webgl_example" style=" " src="http://webglfundamentals.org/webgl/resources/editor.html?url=/webgl/lessons/../webgl-3d-perspective-w-matrix.html"></iframe>
+<a href="http://webglfundamentals.org/webgl/webgl-3d-perspective-w-matrix.html" target="_blank">&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x5728;&#x65B0;&#x7A97;&#x53E3;&#x4E2D;&#x6253;&#x5F00;</a></p><p>All that was basically just to show you that dividing by Z gives us perspective and that WebGL conveniently does this divide by Z for us.</p><p>&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x672C;&#x6587;&#x57FA;&#x672C;&#x4E0A;&#x5C31;&#x662F;&#x5728;&#x544A;&#x8BC9;&#x4F60;&#x4E24;&#x4EF6;&#x4E8B;&#xFF1A;1.&#x5C06;Z&#x5750;&#x6807;&#x76F8;&#x5173;&#x503C;&#x5F53;&#x4F5C;&#x9664;&#x6CD5;&#x56E0;&#x5B50;&#x4FBF;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x900F;&#x89C6;&#x6548;&#x679C;&#xFF0C;2.WebGL&#x4F1A;&#x81EA;&#x52A8;&#x4E3A;&#x6211;&#x4EEC;&#x8FDB;&#x884C;&#x9664;&#x6CD5;&#x8FD0;&#x7B97;&#x3002;</p><p>But there are still some problems. For example if you set Z to around -100 you&apos;ll see something like the animation below</p><p>&#x4E0D;&#x8FC7;&#xFF0C;&#x73B0;&#x5728;&#x7684;&#x7A0B;&#x5E8F;&#x8FD8;&#x5B58;&#x5728;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#x3002;&#x5982;&#x679C;Z&#x7684;&#x503C;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;-100&#x5DE6;&#x53F3;&#xFF0C;&#x4F60;&#x5C06;&#x4F1A;&#x770B;&#x5230;&#x50CF;&#x4E0B;&#x9762;&#x52A8;&#x753B;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x72B6;&#x51B5;&#xFF1A;
+<img src="http://oc3wui92y.bkt.clouddn.com/image/webgl/z-clipping.gif"></p><p>What&apos;s going on? Why is the F disappearing early? Just like WebGL clips X and Y or +1 to -1 it also clips Z. What we&apos;re seeing here is where Z &lt; -1.</p><p>&#x53D1;&#x751F;&#x4E86;&#x4EC0;&#x4E48;&#xFF1F;&#x201C;F&#x201D;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x8FD9;&#x4E48;&#x65E9;&#x6D88;&#x5931;&#xFF1F;&#x4E0E;X&#xFF0C;Y&#x5750;&#x6807;&#x4E00;&#x6837;&#xFF0C;WebGL&#x540C;&#x6837;&#x4F1A;&#x88C1;&#x526A;Z&#x5750;&#x6807;&#x3002;&#x6211;&#x4EEC;&#x6240;&#x770B;&#x5230;&#x7684;&#x72B6;&#x51B5;&#x5C31;&#x662F;&#x5728;&#x88C1;&#x526A;&#x7A7A;&#x95F4;&#x5185;&#x5F53;Z &lt; -1&#x65F6;&#x7684;&#x60C5;&#x51B5;&#x3002;</p><p>I could go into detail about the math to fix it but you can derive it the same way we did 2D projection. We need to take Z, add some amount and scale some amount and we can make any range we want get remapped to the -1 to +1.</p><p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6570;&#x5B66;&#x65B9;&#x6CD5;&#x4FEE;&#x6B63;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x8FC7;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<a href="http://stackoverflow.com/a/28301213/128511" target="_blank">&#x7C7B;&#x4F3C;&#x5728;2D&#x6620;&#x5C04;&#x4E2D;&#x7684;&#x65B9;&#x5F0F;</a>&#x53BB;&#x89E3;&#x51B3;&#x3002;&#x901A;&#x8FC7;&#x5BF9;Z&#x5148;&#x540E;&#x505A;&#x52A0;&#x6CD5;&#x548C;&#x4E58;&#x6CD5;&#x8FD0;&#x7B97;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x4EFB;&#x4F55;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6570;&#x503C;&#x6620;&#x5C04;&#x5230;-1~+1&#x4E4B;&#x95F4;&#x3002;</p><p>The cool thing is all of these steps can be done in 1 matrix. Even better, rather than a fudgeFactor we&apos;ll decide on a fieldOfView and compute the right values to make that happen.</p><p>&#x4E0A;&#x9762;&#x7684;&#x64CD;&#x4F5C;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x88AB;&#x5408;&#x5E76;&#x5230;&#x4E4B;&#x524D;&#x7684;&#x77E9;&#x9635;&#x4E2D;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x5F88;&#x9177;&#xFF1F;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x6539;&#x8FDB;&#x77E9;&#x9635;&#x51FD;&#x6570;&#xFF0C;&#x4F7F;&#x5F97;&#x5176;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;<code>fieldOfView</code>&#x4ECE;&#x800C;&#x8BA1;&#x7B97;&#x51FA;<code>fudgeFactor</code>&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;<code>fudgeFactor</code>&#x3002;</p><p>&#x4E0B;&#x9762;&#x662F;&#x6539;&#x8FDB;&#x540E;&#x7684;&#x77E9;&#x9635;&#x51FD;&#x6570;&#xFF1A;</p><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makePerspective</span>(<span class="hljs-params">fieldOfViewInRadians, aspect, near, far</span>) </span>{
+  <span class="hljs-keyword">var</span> f = <span class="hljs-built_in">Math</span>.tan(<span class="hljs-built_in">Math</span>.PI * <span class="hljs-number">0.5</span> - <span class="hljs-number">0.5</span> * fieldOfViewInRadians);
+  <span class="hljs-keyword">var</span> rangeInv = <span class="hljs-number">1.0</span> / (near - far);
+
+  <span class="hljs-keyword">return</span> [
+    f / aspect, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
+    <span class="hljs-number">0</span>, f, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>,
+    <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, (near + far) * rangeInv, <span class="hljs-number">-1</span>,
+    <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, near * far * rangeInv * <span class="hljs-number">2</span>, <span class="hljs-number">0</span>
+  ];
+};</code></pre>
+<p>This matrix will do all our conversions for us. It will adjust the units so they are in clip space, it will do the math so that we can choose a field of view by angle and it will let us choose our Z-clipping space. It assumes there&apos;s an eye or camera at the origin (0, 0, 0) and given a zNear and a fieldOfView it computes what it would take so that stuff at zNear ends up at Z = -1 and stuff at zNear that is half of fieldOfView above or below the center ends up with Y = -1 and Y = 1 respectively. It computes what to use for X by just multiplying by the aspect passed in. We&apos;d normally set this to the width / height of the display area. Finally, it figures out how much to scale things in Z so that stuff at zFar ends up at Z = 1.</p><p>Here&apos;s a diagram of the matrix in action.</p><p>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x751F;&#x6210;&#x7684;&#x77E9;&#x9635;&#x4F1A;&#x4E3A;&#x6211;&#x4EEC;&#x5904;&#x7406;&#x597D;&#x4E00;&#x5207;&#x4E8B;&#x60C5;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5C06;&#x5750;&#x6807;&#x6620;&#x5C04;&#x5230;&#x88C1;&#x526A;&#x7A7A;&#x95F4;&#xFF0C;&#x505A;&#x4E00;&#x4E9B;&#x6570;&#x5B66;&#x8FD0;&#x7B97;&#x4F7F;&#x5F97;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8C03;&#x6574;&#x89C6;&#x53E3;&#x89D2;&#x5EA6;&#x548C;Z&#x8F74;&#x65B9;&#x5411;&#x7684;&#x88C1;&#x526A;&#x8303;&#x56F4;&#x3002;&#x8BE5;&#x77E9;&#x9635;&#x5047;&#x5B9A;&#xFF0C;&#x773C;&#x775B;&#xFF08;&#x6216;&#x8005;&#x8BF4;&#x76F8;&#x673A;&#xFF09;&#x5904;&#x4E8E;&#x539F;&#x70B9;&#xFF08;0&#xFF0C;0&#xFF0C;0&#xFF09;&#x5904;&#xFF0C;<code>zNear</code>&#x4EE5;Z=-1&#x4E3A;&#x754C;&#x9650;&#xFF0C;&#x5176;Y&#x8F74;&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x957F;&#x5EA6;&#x4E3A;<code>fieldOfView</code>&#x7684;&#x4E00;&#x534A;&#x5E76;&#x4E14;&#x5176;&#x4E2D;&#x5FC3;&#x70B9;&#x4F4D;&#x4E8E;Y&#x8F74;&#x8303;&#x56F4;&#xFF08;+1~-1&#xFF09;&#x7684;&#x4E2D;&#x592E;&#x3002;&#x81F3;&#x4E8E;X&#x8F74;&#x65B9;&#x5411;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F1A;&#x5BF9;&#x53C2;&#x6570;<code>aspect</code>&#x8FDB;&#x884C;&#x4E58;&#x6CD5;&#x8FD0;&#x7B97;&#x5F97;&#x51FA;&#x3002;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x4F1A;&#x5C06;<code>aspect</code>&#x8BBE;&#x7F6E;&#x4E3A;&#x5C55;&#x793A;&#x533A;&#x57DF;&#x7684;&#x5BBD;&#x9AD8;&#x6BD4;<code>width / height</code>&#x3002;&#x6700;&#x540E;&#xFF0C;&#x5B83;&#x4F1A;&#x7B97;&#x51FA;Z&#x8F74;&#x65B9;&#x5411;&#x4E0A;&#x7684;&#x7F29;&#x653E;&#x6BD4;&#x4F8B;&#xFF0C;&#x4F7F;&#x5F97;zFar&#x4E0D;&#x8D85;&#x8FC7;<code>Z = 1</code>&#x3002;</p><p>&#x4E0B;&#x9762;&#x662F;&#x4E0A;&#x8FF0;&#x77E9;&#x9635;&#x7684;&#x884C;&#x4E3A;&#x56FE;&#x89E3;&#xFF1A;</p><p><iframe src="blob:http%3A//webglfundamentals.org/19783b84-9d71-4821-a83a-b68a310c6156"></iframe>
+<a href="http://webglfundamentals.org/webgl/frustum-diagram.html" target="_blank">&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x5728;&#x65B0;&#x7A97;&#x53E3;&#x4E2D;&#x6253;&#x5F00;</a></p><p>That shape that looks like a 4 sided cone the cubes are spinning in is called a &quot;frustum&quot;. The matrix takes the space inside the frustum and converts that to clip space. zNear defines where things will get clipped in the front and zFar defines where things get clipped in the back. Set zNear to 23 and you&apos;ll see the front of the spinning cubes get clipped. Set zFar to 24 and you&apos;ll see the back of the cubes get clipped.</p><p>&#x8FD9;&#x4E9B;&#x7ACB;&#x65B9;&#x4F53;&#x6240;&#x5904;&#x7684;4&#x9762;&#x9525;&#x4F53;&#x53EB;&#x505A;&#x201C;&#x622A;&#x5934;&#x9525;&#x4F53;&#x201D;&#x3002;&#x4E0A;&#x8FF0;&#x77E9;&#x9635;&#x4F1A;&#x5C06;&#x622A;&#x5934;&#x9525;&#x4F53;&#x5185;&#x7684;&#x7A7A;&#x95F4;&#x8F6C;&#x6362;&#x4E3A;&#x88C1;&#x526A;&#x7A7A;&#x95F4;&#xFF0C;<code>zNear</code>&#x4E4B;&#x524D;&#x548C;<code>zFar</code>&#x4E4B;&#x540E;&#x7684;&#x7269;&#x4F53;&#x90FD;&#x4F1A;&#x88AB;&#x88C1;&#x526A;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x8BD5;&#x4E00;&#x8BD5;&#xFF0C;&#x5C06;<code>zNear</code>&#x8BBE;&#x7F6E;&#x4E3A;23&#xFF0C;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x7ACB;&#x65B9;&#x4F53;&#x9760;&#x524D;&#x90E8;&#x5206;&#x4F1A;&#x88AB;&#x88C1;&#x526A;&#x3002;&#x5982;&#x679C;&#x5C06;<code>zFar</code>&#x8BBE;&#x7F6E;&#x4E3A;24&#xFF0C;&#x7ACB;&#x65B9;&#x4F53;&#x9760;&#x540E;&#x90E8;&#x5206;&#x4E5F;&#x4F1A;&#x88AB;&#x88C1;&#x526A;&#x3002;</p><p>There&apos;s just one problem left. This matrix assumes there&apos;s a viewer at 0,0,0 and it assumes it&apos;s looking in the negative Z direction and that positive Y is up. Our matrices up to this point have done things in a different way. To make this work we need to put our objects in front of the view.</p><p>&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x7A0B;&#x5E8F;&#x8FD8;&#x5269;&#x4E0B;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x3002;&#x4E0A;&#x8FF0;&#x77E9;&#x9635;&#x5176;&#x5B9E;&#x5047;&#x5B9A;&#x89C2;&#x5BDF;&#x8005;&#x5904;&#x4E8E;&#xFF08;0&#xFF0C;0&#xFF0C;0&#xFF09;&#xFF0C;&#x89C6;&#x7EBF;&#x7684;&#x65B9;&#x5411;&#x662F;Z&#x8F74;&#x8D1F;&#x534A;&#x8F74;&#x65B9;&#x5411;&#xFF0C;&#x5E76;&#x4E14;Y&#x8F74;&#x7684;&#x8D1F;&#x534A;&#x8F74;&#x662F;&#x671D;&#x4E0A;&#x7684;&#x3002;&#x4E0A;&#x8FF0;&#x5047;&#x8BBE;&#x662F;&#x4E0D;&#x662F;&#x5F88;&#x5947;&#x602A;&#x3002;&#x4E3A;&#x4E86;&#x4FEE;&#x6B63;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x6240;&#x6709;&#x7269;&#x4F53;&#x653E;&#x7F6E;&#x5728;&#x89C6;&#x7EBF;&#x524D;&#x65B9;&#x3002;</p><p>We could do that by moving our F. We were drawing at (45, 150, 0). Let&apos;s move it to (-150, 0, -360)</p><p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x7ED8;&#x5236;&#x5728;&#xFF08;45&#xFF0C;150&#xFF0C;0&#xFF09;&#x7684;&#x201C;F&#x201D;&#x79FB;&#x52A8;&#x81F3;&#xFF08;-150&#xFF0C;0&#xFF0C;-360&#xFF09;&#x3002;</p><p>Now, to use it we just need to replace our old call to make2DProjection with a call to makePerspective</p><p>&#x73B0;&#x5728;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x539F;&#x5148;&#x7684;<code>make2DProjection</code>&#x66FF;&#x6362;&#x4E3A;<code>makePerspective</code>&#xFF1A;</p><pre><code class="lang-js"><span class="hljs-keyword">var</span> aspect = canvas.clientWidth / canvas.clientHeight;
+    <span class="hljs-keyword">var</span> projectionMatrix =
+        makePerspective(fieldOfViewRadians, aspect, <span class="hljs-number">1</span>, <span class="hljs-number">2000</span>);
+    <span class="hljs-keyword">var</span> translationMatrix =
+        makeTranslation(translation[<span class="hljs-number">0</span>], translation[<span class="hljs-number">1</span>], translation[<span class="hljs-number">2</span>]);
+    <span class="hljs-keyword">var</span> rotationXMatrix = makeXRotation(rotation[<span class="hljs-number">0</span>]);
+    <span class="hljs-keyword">var</span> rotationYMatrix = makeYRotation(rotation[<span class="hljs-number">1</span>]);
+    <span class="hljs-keyword">var</span> rotationZMatrix = makeZRotation(rotation[<span class="hljs-number">2</span>]);
+    <span class="hljs-keyword">var</span> scaleMatrix = makeScale(scale[<span class="hljs-number">0</span>], scale[<span class="hljs-number">1</span>], scale[<span class="hljs-number">2</span>]);</code></pre>
+<p>And here it is.</p><p>&#x7EC8;&#x6781;&#x6548;&#x679C;&#xFF1A;</p><p><iframe class="webgl_example" style=" " src="http://webglfundamentals.org/webgl/resources/editor.html?url=/webgl/lessons/../webgl-3d-perspective-matrix.html"></iframe>
+<a href="http://webglfundamentals.org/webgl/webgl-3d-perspective-matrix.html" target="_blank">&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x5728;&#x65B0;&#x7A97;&#x53E3;&#x4E2D;&#x6253;&#x5F00;</a></p><p>We&apos;re back to just a matrix multiply and we&apos;re getting both a field of view and we&apos;re able to choose our Z space. We&apos;re not done but this article is getting too long. Next up, cameras.</p><p>&#x4E00;&#x8DEF;&#x4E0B;&#x6765;&#xFF0C;&#x53C8;&#x56DE;&#x5230;&#x4E86;1&#x4E2A;&#x77E9;&#x9635;&#x7684;&#x65F6;&#x4EE3;&#xFF0C;&#x8BE5;&#x77E9;&#x9635;&#x540C;&#x65F6;&#x5177;&#x6709;&#x8C03;&#x6574;Z&#x8F74;&#x65B9;&#x5411;&#x7684;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#x548C;&#x89C6;&#x53E3;&#x533A;&#x57DF;&#x7684;&#x80FD;&#x529B;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x8FD8;&#x6CA1;&#x6709;&#x7ED3;&#x675F;&#xFF0C;&#x7531;&#x4E8E;&#x6587;&#x7AE0;&#x5DF2;&#x7ECF;&#x8FC7;&#x957F;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x77E5;&#x8BC6;&#x4F1A;&#x88AB;&#x653E;&#x5728;&#x4E0B;&#x4E00;&#x7AE0;&#x8282;&#x4E2D;&#x8BE6;&#x7EC6;&#x8BA8;&#x8BBA;&#x3002;&#x4E0B;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x8BA8;&#x8BBA;<a href="http://webglfundamentals.org/webgl/lessons/webgl-3d-camera.html" target="_blank">WebGL 3D &#x76F8;&#x673A;</a></p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="WebGL-Orthographic-3D.html" class="navigation navigation-prev " aria-label="Previous page: WebGL - Orthographic 3D">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="WebGL-3D-Cameras.html" class="navigation navigation-next " aria-label="Next page: WebGL 3D - Cameras">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"WebGL 3D Perspective","level":"1.5.2","depth":2,"next":{"title":"WebGL 3D - Cameras","level":"1.5.3","depth":2,"path":"3D/WebGL-3D-Cameras.md","ref":"3D/WebGL-3D-Cameras.md","articles":[]},"previous":{"title":"WebGL - Orthographic 3D","level":"1.5.1","depth":2,"path":"3D/WebGL-Orthographic-3D.md","ref":"3D/WebGL-Orthographic-3D.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3D/WebGL-3D-Perspective.md","mtime":"2016-10-17T05:33:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-10-17T05:36:02.194Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
