@@ -163,7 +163,7 @@ And here it is
 
 What if we wanted to just use a part of the texture across the front of the 'F'? Textures are referenced with "texture coordinates" and texture coordinates go from 0.0 to 1.0 from left to right across the texture and 0.0 to 1.0 from bottom to top up the texture.
 
-如果我们只想在‘F’的正面使用纹理的一部分呢？纹理是被‘纹理坐标’引用的，在纹理中纹理坐标 x 轴的范围是 [0.0，1.0]，y 轴的范围是 [0.0，1.0]。
+如果我们只想在‘F’的正面使用纹理的一部分呢？纹理是被‘纹理坐标’引用的，在纹理中纹理坐标从左到右的范围是 [0.0，1.0]，从下到上的范围是 [0.0，1.0]。
 
 ![svg][6]
 
