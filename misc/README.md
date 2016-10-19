@@ -1,2 +1,3 @@
 # Misc
 
+pre-multiplied alpha
