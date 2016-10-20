@@ -1,7 +1,7 @@
 # 使用 WebGL 的 DrawImage
 
 这篇文章是接着 [WebGL orthographic 3D][1] 讲解。如果你还没有阅读它，建议[你从那里开始][2]。你可以从 [WebGL 3D textures][3] 了解到纹理和纹理坐标是怎么工作的。
-通常，你只需要一个函数去绘制图像，就可以做出大部分的 2D 游戏。当然，某些 2D 游戏可以利用线条来做出很棒的效果，不过，如果你只知道如果在屏幕上绘制 2D 图像的话，你同样可以写出很多 2D 游戏。
+通常，你只需要一个函数去绘制图像，就可以做出大部分的 2D 游戏。当然，某些 2d 游戏可以利用线条来做出很棒的效果，不过，如果你只知道如果在屏幕上绘制 2D 图像的话，你同样可以写出很多 2d 游戏。
 Canvas 2D api 有一个很灵活的绘制图片的函数，叫做 `drawImage`。它有 3 个版本
 ```
 ctx.drawImage(image, dstX, dstY);
@@ -171,6 +171,9 @@ function render(time) {
 requestAnimationFrame(render);
 ```
 你可以看到运行情况
+
+![s_random_随即图二][4]
+
 [查看网页][5]
 看一下第 2 个版本的 canvas `drawImage` 函数。
 ```
@@ -211,6 +214,9 @@ function drawImage(tex, texWidth, texHeight, dstX, dstY, dstWidth, dstHeight) {
 }
 ```
 并且，上面的代码可以使用不同的尺寸。
+
+![ss_random_photo.gif随机移动][6]
+
 [查看网页][7]
 看起来挺简单的。那第 3 个版本的 canvas `drawImage` 是什么样的？
 ```
@@ -300,15 +306,21 @@ function drawImage(
 }
 ```
 这里，我将上述代码更新了，这样就可以选择纹理的部分内容。
+
+![scale_random_photo伸缩图][9]
+
 [查看网页][10]
 不像 canvas 2D api 一样，我们的 WebGL 版的可以处理 canvas 不能处理的情况。
 例如，我们可以给 `source` 或 `dest` 传入负的宽或高。负的 `srcWidth` 会相对于 `srcX` 的左边来获取像素内容。负的 `dstWidth` 会相当于 `dstX` 的左边来绘制像素。在 canvas 2D api 里，如果传入负值的haunted，会抛出错误或者发生不可描述的行为。
+
+![rotate_random_photo 随机旋转图][11]
+
 [查看网页][12]
 另外，因为我们使用的是矩阵，所有我们可以做[任何的矩阵运算][13]。
 例如，我们可以让着纹理中心旋转纹理坐标
 改变纹理的矩阵代码如下：
 ```
-// 其实就像 2D 投影的矩阵，只是它是在纹理空间而非裁剪空间中
+// 其实就像 2d 投影的矩阵，只是它是在纹理空间而非裁剪空间中
 var texProjectionMatrix = makeScale(1 / texWidth, 1 / texHeight, 1);
 
 // 因为，我们使用了一个投影矩阵，将坐标值转化为像素值
@@ -329,6 +341,9 @@ var texMatrix = m4.scaling(1 / texWidth, 1 / texHeight, 1);
   // 设置纹理矩阵
   gl.uniformMatrix4fv(textureMatrixLocation, false, texMatrix);
 ```
+
+![rotate_random_photo.随机旋转][14]
+
 [查看网页][15]
 不过，这里有个问题，当图片在旋转时，我们能够看见残留的纹理边缘。因为它设置的是 `CLAMP_TO_EDGE`，所以，边缘会出现重复的现象。
 我们可以通过，在着色器中，移除不在 [0,1] 返回之间的像素值，去修复该问题。`discard` 会立即终止着色器，从而不会再绘制像素。
@@ -350,6 +365,8 @@ void main() {
 }
 ```
 现在，那些边缘模糊角便消失了。
+
+![rotate_dual_random_photo消除模糊边角][16]
 [查看网页][17]
 或许你想使用纯色，当纹理坐标超出了当前的纹理区域。
 ```
@@ -370,8 +387,10 @@ void main() {
    gl_FragColor = texture2D(texture, v_texcoord);
 }
 ```
+
+![blue_random_photo蓝底图][18]
 当然，创造性的使用着色器是没有限制的。
-接下来，[我们将实践 canvas 2D's 的矩阵栈][19]
+接下来，[我们将实践 canvas 2d's 的矩阵栈][19]
 
 ## 细小的优化
 我其实并不推荐这个优化。不过，我想说的是如何创造性的思维，因为 WebGL 的本质其实就是你如果创造性的使用它提供的功能。
@@ -392,6 +411,9 @@ void main() {
 }
 ```
 我们现在可以将用来建立纹理坐标的代码删除，并且它还是可以像以前一样正常工作。
+
+![blue_rotate_random_photo重叠图][20]
+
 [查看网页][21]
   [1]: http://webglfundamentals.org/webgl/lessons/webgl-3d-orthographic.html
   [2]: http://webglfundamentals.org/webgl/lessons/webgl-3d-orthographic.html
