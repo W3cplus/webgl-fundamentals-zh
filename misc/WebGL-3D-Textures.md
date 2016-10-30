@@ -79,7 +79,7 @@ We need to setup the texture coordinates
 ```
 And you can see the coordinates we're using which are mapping the entire texture to each quad on our 'F'.
 
-你可以看到我们使用的坐标将整个纹理映射到‘F‘的每一个矩形上。
+你可以看到我们使用的坐标将整个纹理映射到“F”的每一个矩形上。
 
 ```
 	// Fill the buffer with texture coordinates for the F.
@@ -121,7 +121,7 @@ Here's the image we're going to use
 
 What an exciting image! Actually an image with an 'F' on it has a clear direction so it's easy to tell if it's turned or flipped etc when we use it as a texture.
 
-多么令人兴奋的图片！实际上图片中的‘F’已经有一个明确的方向了，当我们使用它作为一个纹理时，很容易判断它是否旋转或翻转。
+多么令人兴奋的图片！实际上图片中的“F”已经有一个明确的方向了，当我们使用它作为一个纹理时，很容易判断它是否旋转或翻转。
 
 The thing about loading an image is it happens asynchronously. We request the image to be loaded but it takes a while for the browser to download it. There are generally 2 solutions to this. We could make the code wait until the texture has downloaded and only then start drawing. The other solution is to make up some texture to use until the image is downloaded. That way we can start rendering immediately. Then, once the image has been downloaded we copy the image to the texture. We'll use that method below.
 
@@ -163,7 +163,7 @@ And here it is
 
 What if we wanted to just use a part of the texture across the front of the 'F'? Textures are referenced with "texture coordinates" and texture coordinates go from 0.0 to 1.0 from left to right across the texture and 0.0 to 1.0 from bottom to top up the texture.
 
-如果我们只想在‘F’的正面使用纹理的一部分呢？纹理是被‘纹理坐标’引用的，在纹理中纹理坐标从左到右的范围是 [0.0，1.0]，从下到上的范围是 [0.0，1.0]。
+如果我们只想在“F”的正面使用纹理的一部分呢？纹理是被‘纹理坐标’引用的，在纹理中纹理坐标从左到右的范围是 [0.0，1.0]，从下到上的范围是 [0.0，1.0]。
 
 ![svg][6]
 
@@ -369,7 +369,7 @@ Here it is.
 
 Why doesn't the keyboard texture show up? That's beacuse WebGL has a kind of severe restriction on textures that are not a power of 2 in both dimensions. Powers of 2 are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, etc. The 'F' texture was 256x256. 256 is a power of 2. The keyboard texture is 320x240. Neither of those are a power of 2 so trying to display the texture fails. In the shader when `texture2D` is called and when the texture referenced is not setup correctly WebGL will use color (0, 0, 0, 1) which is black. If you open up the JavaScript console or Web Console, depending on the browser you might see errors pointing out the problem like this
 
-为什么键盘纹理没有显示出来？这是因为 WebGL 对于纹理的限制很严格，纹理的每个方向上尺寸都须为 2 的指数，而这个纹理每个方向上都不符合。2 的倍数有 1，2，4，8，16，32，64，128，256，512，1024，2048，等等。‘F’的纹理尺寸是 256x256。256 是 2 的指数。键盘纹理尺寸是 320x240。两者均不是 2 的指数，所以显示纹理失败。当调用`texture2D`，引用的纹理没有被正确设置时，WebGL 会使用黑色（0，0，0，1）代替。如果你打开 JavaScript 控制台或者 WebGL 控制台，这取决于你使用的浏览器，你可能会看到这样的错误信息
+为什么键盘纹理没有显示出来？这是因为 WebGL 对于纹理的限制很严格，纹理的每个方向上尺寸都须为 2 的指数，而这个纹理每个方向上都不符合。2 的倍数有 1，2，4，8，16，32，64，128，256，512，1024，2048，等等。“F”的纹理尺寸是 256x256。256 是 2 的指数。键盘纹理尺寸是 320x240。两者均不是 2 的指数，所以显示纹理失败。当调用`texture2D`，引用的纹理没有被正确设置时，WebGL 会使用黑色（0，0，0，1）代替。如果你打开 JavaScript 控制台或者 WebGL 控制台，这取决于你使用的浏览器，你可能会看到这样的错误信息
 
 ```
 	WebGL: INVALID_OPERATION: generateMipmap: level 0 not power of 2
