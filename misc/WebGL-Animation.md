@@ -61,7 +61,7 @@ You can see the problem in this example
 
 In the example above we want to rotate all of the 'F's at the same speed. The 'F' in the middle is running full speed and is frame rate independent. The one on the left and the right are simulating if the browser was only running at 1/8th max speed for the current machine. The one on the left is NOT frame rate independent. The one on the right IS frame rate independent.
 
-上面的示例我们想所有的‘ F ’能以同样的速度旋转。中间的‘ F ’是以独立的帧速率全速运行的。左右两边的是模拟浏览器以当前机器最大速度的 1/8 运行的情况。左边的不是独立的帧速率。而右边的是独立的帧速率
+上面的示例我们想所有的“F”能以同样的速度旋转。中间的“F”是以独立的帧速率全速运行的。左右两边的是模拟浏览器以当前机器最大速度的 1/8 运行的情况。左边的不是独立的帧速率。而右边的是独立的帧速率
 
 Notice because the one on the left is not taking into account that the frame rate might be slow it's not keeping up. The one on the right though, even though it's running at 1/8 the frame rate it is keeping up with the middle one running at full speed.
 
@@ -69,7 +69,7 @@ Notice because the one on the left is not taking into account that the frame rat
 
 The way to make animation frame rate independent is to compute how much time it took between frames and use that to calcuate how much to animate this frame.
 
-使动画帧的速率独立的方法是，计算两帧之间的时间差，用这个来计算每秒的帧动画次数。
+使动画的帧数独立的方法是，计算两帧之间的时间差，用这个来计算每秒的帧动画次数。
 
 First off we need to get the time. Fortunately `requestAnimationFrame` passes us the time since the page was loaded when it calls us.
 
@@ -106,7 +106,7 @@ So, we can then compute the delta time like this
 
 Once we have the `deltaTime` in seconds then all our calculations can be in how many units per second we want something to happen. In this case `rotationSpeed` is 1.2 which means we want to rotate 1.2 radians per second. That's about 1/5 of a turn or in other words it will take about 5 seconds to turn around completely regardless of the frame rate.
 
-一旦我们得到`时间差`，我们可以计算我们想要实现的事情在每秒中执行的次数。在这个示例中`rotationSpeed`为 1.2，意味着我们希望每秒旋转 1.2 圈。大约 1/5 圈，换句话说，无论帧速率是多少都需要大约 5 秒的时间旋转完整。
+一旦我们得到`时间差`，我们可以计算我们想要实现的事情在每秒中执行的次数。在这个示例中`rotationSpeed`为 1.2，意味着我们希望每秒旋转 1.2 圈。大约 1/5 圈，换句话说，无论帧数是多少都需要大约 5 秒的时间旋转完整。
 
 ```
   rotation[1] += rotationSpeed * deltaTime;
