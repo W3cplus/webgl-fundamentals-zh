@@ -1,14 +1,14 @@
 ## WebGL - Rasterization vs 3D libraries
 
-## WebGL－Rasterization（光栅化） vs 3D 库
+## WebGL－栅格化 vs 3D 库
 
 This post is a kind of side topic on a series of posts about WebGL. The first [started with fundamentals][1].
 
-这篇文章是 WebGL 一系列文章中的一个的次要话题。本系列文章的第一篇是[从基础原理开始]。
+这篇文章是 WebGL 一系列文章中的一个的周边话题。本系列文章的第一篇是[从基础原理开始][1]。
 
 I'm writing this because my claim that WebGL is a Rasterization API and not a 3D API touches a nerve with some people. I'm not sure why they feel threatened or whatever it is that makes them so upset I called WebGL a Rasterization API.
 
-我写这篇文章是因为我认为 WebGL 是个  Rasterization API 而不是 3D API，这触动了一些人的神经。我不知道他们为什么感觉受到威胁，可能是我将 WebGL 称为 Rasterization API 让他们不安。
+我写这篇文章是因为我认为 WebGL 是个栅格化 API 而不是 3D API，这触动了一些人的神经。我不知道他们为什么感觉受到威胁，可能是我将 WebGL 称为栅格化 API 让他们不安。
 
 Arguably everything is a matter of perspective. I might say a knife is an eating utensil, someone else might say a knife is a tool and yet another person might say a knife is a weapon.
 
@@ -16,7 +16,7 @@ Arguably everything is a matter of perspective. I might say a knife is an eating
 
 In the case of WebGL though there's a reason I think it's important to call WebGL a rasterization API and that is specifically because of the amount of 3D math knowledge you need to know to use WebGL to draw anything in 3D.
 
-在 WebGL 的案例中，有一个我认为 WebGL 称为 rasterization API 的重要原因，就是使用 WebGL 绘制 3D 的任何东西时，你需要运用大量的 3D 数学知识。
+在 WebGL 的案例中，有一个我认为 WebGL 称为栅格化 API 的重要原因，就是使用 WebGL 绘制 3D 的任何东西时，你需要运用大量的 3D 数学知识。
 
 I would argue that anything that calls itself a 3D library should do the 3D parts for you. You should be able to give the library some 3D data, some material parameters, some lights and it should draw 3D for you. WebGL (and OpenGL ES 2.0+) are both used to draw 3D but neither fits this description.
 
@@ -196,7 +196,7 @@ If you inspect the code you'll see there's not a whole lot of difference in term
 
 The point of this last demostration is to show that effectively WebGL is just a rasterization engine, similar to Canvas 2D. Sure WebGL does have features that help you implement 3D. WebGL has a depth buffer which makes depth sorting far easier than a system without. WebGL also has various math functions built in that are very useful for doing 3D math although there is argubly nothing that makes them 3D. They're a math library. You use them for math whether or not that math is 1D, 2D, 3D, whatever. But ultimately, WebGL only rasterizes. You have to provide it with clipspace coordinates that represent what you want drawn. Sure you provide a x,y,z,w and it divides by W before rendering but that's hardly enough to qualify WebGL as a 3D library. In the 3D librares you supply 3D data, the libraries take care of calculating clipspace points from 3D.
 
-这一点以上示例有效的表明 WebGL 是一个光栅化引擎，类似于 Canvas 2D。当然 WebGL 也有实现 3D 的功能。WebGL 有一个深度缓冲，相比于没有深度缓冲的系统，深度排序更容易实现。WebGL 也有各种高效绘制 3D 图形的内置数学方法，绘制 3D 是无可争辩的。它们是一个数学库。无论 1D，2D 还是 3D 的数学你都可以使用它。但最终，WebGL 只是光栅化的 API。你必须提供需要绘制的有效的裁剪坐标。当然，你提供 x，y，z，w，WebGL 在渲染之前将它们各自除以 w ，但这难以将 WebGL 视为 3D 库。在 3D 库中，你提供 3D 数据，它们会这些 3D 数据转换成裁剪坐标。
+这一点以上示例有效的表明 WebGL 是一个栅格化引擎，类似于 Canvas 2D。当然 WebGL 也有实现 3D 的功能。WebGL 有一个深度缓冲，相比于没有深度缓冲的系统，深度排序更容易实现。WebGL 也有各种高效绘制 3D 图形的内置数学方法，绘制 3D 是无可争辩的。它们是一个数学库。无论 1D，2D 还是 3D 的数学你都可以使用它。但最终，WebGL 只是光栅化的 API。你必须提供需要绘制的有效的裁剪坐标。当然，你提供 x，y，z，w，WebGL 在渲染之前将它们各自除以 w ，但这难以将 WebGL 视为 3D 库。在 3D 库中，你提供 3D 数据，它们会这些 3D 数据转换成裁剪坐标。
 
 I hope you at least understand where I'm coming from when I say WebGL is not a 3D library. I hope you'll also realize that a 3D library should handle the 3D for you. OpenGL did. Three.js does. OpenGL ES 2.0 and WebGL do not. Therefore they argubly don't belong in the same broad category of "3D libraries".
 
