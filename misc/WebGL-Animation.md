@@ -1,4 +1,5 @@
 ## WebGL - Animation
+
 ## WebGL - ¶¯»­
 
 This post is a continuation of a series of posts about WebGL. The first [started with fundamentals][1]. and the previous was about [3D cameras][2]. If you haven't read those please view them first.
